@@ -1,0 +1,60 @@
+body {
+margin:0px;
+padding:0px;
+background-image:url("background.png");
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+#Intro {
+text-align:center;
+padding:20px;
+margin:50px;
+margin-top:200px;
+margin-bottom:200px;
+}
+
+#Intro h1 {
+color:red;
+font-size:60px;
+}
+
+h1 {
+color:red;
+}
+.subtitle {
+font-style:italic;
+}
+
+/* SLIDE STYLINGS */
+#start {
+background-color:white;
+}
+
+#family {
+background-color:black;
+color:white;
+}
+
+.slide {
+padding:50px;
+border-radius:20px;
+margin:50px;
+}
+
+.slide p {
+padding:10px;
+}
+
+.slide img {
+float:left;
+padding:10px;
+}
+
+.full-slide {
+width:100%;
+margin:0px;
+height:100%;
+background-color:lightblue;
+padding:30px;
+}
