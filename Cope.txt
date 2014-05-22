@@ -1,0 +1,4 @@
+<h2>Cope</h2>
+<p>Yea this works! I think atleast because I only have one file with this
+so I don't know if it is actually changing to the right file when I
+click on different buttons.</p>
