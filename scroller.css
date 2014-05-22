@@ -55,6 +55,31 @@ padding:10px;
 width:100%;
 margin:0px;
 height:100%;
-background-color:lightblue;
 padding:30px;
+}
+/* END SLIDE STYLINGS */
+
+/* PERSON INFO SLIDE */
+.person {
+font-size:20;
+padding:5px;
+margin:5px;
+border-radius:10px;
+background-color:lightblue;
+}
+
+#people_wrapper {
+width:25%;
+float:left;
+text-align:center;
+}
+
+#people_info {
+width:65%;
+height:75%;
+margin:auto;
+float:left;
+background-color:lightgrey;
+border-radius:20px;
+padding:20px;
 }

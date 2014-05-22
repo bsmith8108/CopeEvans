@@ -4,13 +4,8 @@
     <link href="scroller.css" type="text/css" rel="stylesheet">
     <link href="fixed-positioning.css" type="text/css" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript">
-	$(document).ready(function() {
-	    $("#goto").click(function() {
-		window.location.hash = "graph";
-	    });
-	});
-    </script>
+    <script src="universal.js" type="text/javascript" rel="javascript"></script>
+
 </head>
 <body>
     <div id="Intro" data-0="opacity:1" data-300="opacity:0">
@@ -24,7 +19,6 @@
 	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed mollis odio. Sed pellentesque urna nec sodales adipiscing. Vestibulum suscipit bibendum metus. Integer eu orci erat. Morbi mollis ipsum placerat tellus fringilla lacinia at eget ligula. Praesent mattis leo purus, et mollis massa gravida sit amet. Nulla eu tortor elementum, accumsan augue sit amet, imperdiet lectus. Nulla bibendum laoreet accumsan. Phasellus ante elit, venenatis id risus sed, mollis molestie enim. Duis interdum euismod dui vel elementum. Sed eget luctus odio.</p>
 	    <p>
 	    Curabitur sed metus sollicitudin, condimentum libero eu, pulvinar ipsum. Integer commodo bibendum leo a ullamcorper. Etiam ligula arcu, egestas in vestibulum eu, pharetra at massa. Quisque vehicula, justo sed lacinia congue, orci arcu imperdiet quam, a aliquam justo dui ut purus. Duis eleifend interdum interdum. Vestibulum sit amet semper urna. Proin rhoncus nunc ac justo cursus, et consectetur tortor consequat. Suspendisse sollicitudin, diam non venenatis accumsan, enim ante blandit orci, vitae commodo ligula nulla quis dui.</p>
-	<div id="goto">Go To Analysis</div>
 	</div>
 
     	<div class="slide" id="family" data-0="opacity:0" data-1850="" data-2300="opacity:1" data-2800="" data-3200="opacity:0">
@@ -34,11 +28,32 @@
 	    <p>
 	    Curabitur sed metus sollicitudin, condimentum libero eu, pulvinar ipsum. Integer commodo bibendum leo a ullamcorper. Etiam ligula arcu, egestas in vestibulum eu, pharetra at massa. Quisque vehicula, justo sed lacinia congue, orci arcu imperdiet quam, a aliquam justo dui ut purus. Duis eleifend interdum interdum. Vestibulum sit amet semper urna. Proin rhoncus nunc ac justo cursus, et consectetur tortor consequat. Suspendisse sollicitudin, diam non venenatis accumsan, enim ante blandit orci, vitae commodo ligula nulla quis dui.</p>
 	</div>
+	<div class="full-slide" id="peopleInfo" data-0"display:none" data-3250="display:block;left:100%;" data-3500="left:0%" data-3900="" data-4200="left:100%" data-4201="display:none">
+	    <h1>Meet the Family</h1>
+	    <div id="people_wrapper">
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+		<div class="person" onclick="getData(&quot;Cope&quot;)">Cope</div>
+	    </div>
+	    <div id="people_info">
+	    
+	    </div>
+	</div>
+    <!--
 	<div class="full-slide" id="graph" data-0="display:none" data-3250="" data-3260="display:block;top:100%;" data-3500="top:0%;display:block;">
 	   <h1>Analysis</h1>
 	    <p>This is where some cool graphs and visualizations could
 	    go.</p> 
 	</div>
+    -->
     <script type="text/javascript" src="skrollr.min.js"></script>
     <script type="text/javascript">
     var s = skrollr.init();
