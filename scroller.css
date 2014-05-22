@@ -1,9 +1,11 @@
+@font-face {
+font-family: MainFont;
+src: url("gabrille/Gabrielle.ttf");
+}
+
 body {
 margin:0px;
 padding:0px;
-background-image:url("background.png");
-background-repeat:no-repeat;
-background-size:cover;
 }
 
 #Intro {
@@ -12,6 +14,7 @@ padding:20px;
 margin:50px;
 margin-top:200px;
 margin-bottom:200px;
+font-family:MainFont;
 }
 
 #Intro h1 {
@@ -21,9 +24,19 @@ font-size:60px;
 
 h1 {
 color:red;
+font-family:MainFont;
 }
 .subtitle {
 font-style:italic;
+font-family:MainFont;
+font-size:30px;
+}
+
+#background-wrapper-1 {
+background-image:url("background.png");
+background-repeat:no-repeat;
+background-size:cover;
+height:100%;
 }
 
 /* SLIDE STYLINGS */
