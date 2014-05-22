@@ -33,9 +33,9 @@ font-size:30px;
 }
 
 #background-wrapper-1 {
-background-image:url("background.png");
-background-repeat:no-repeat;
-background-size:cover;
+background-image:url("paper_textures.jpg");
+background-repeat:repeat-y;
+background-size:contain;
 height:100%;
 }
 
