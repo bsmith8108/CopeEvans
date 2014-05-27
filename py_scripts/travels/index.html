@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Travel Map</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+    #Travelers {
+    float:left;
+    margin:10px;
+    }
+    .traveler {
+    padding:7px;
+    }
+    .traveler:hover {
+    cursor:pointer;
+    }
+    #usMap {
+    float:left;
+    }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+	var data = [
+	    {"id":1, "x":400 ,"y":63 , "name":"Newport"},
+	    {"id":2,"x":419 ,"y":67 , "name":"MountDesert"},
+	    {"id":3,"x":413 ,"y":76 , "name":"BarHarbor"},
+	    {"id":4,"x":375 ,"y":90 , "name":"Franconia"},
+	    {"id":5,"x":372 ,"y":85 , "name":"LakeWinnipisseogee"},
+	    {"id":6,"x":334 ,"y":101 , "name":"LakePlacid"},
+	    {"id":7,"x":335 ,"y":118 , "name":"CaldwellLakeGeorge"},
+	    {"id":8,"x":346 ,"y":148 , "name":"Catskills"},
+	    {"id":9,"x":397 ,"y":137 , "name":"Boston"},
+	    {"id":10,"x":351 ,"y":173 , "name":"WestPoint"},
+	    {"id":11,"x":340 ,"y":186 , "name":"Hopatcong"},
+	    {"id":12,"x":331 ,"y":217 , "name":"Philadelphia"},
+	    {"id":13,"x":297 ,"y":242 , "name":"WashingtonDC"},
+	    {"id":14,"x":248 ,"y":283 , "name":"SulfurSprings"},
+	    {"id":15,"x":247 ,"y":292 , "name":"SweetSprings"},
+	    {"id":16,"x":270 ,"y":290 , "name":"Lynchburg"},
+	    {"id":17,"x":290 ,"y":290 , "name":"Farmville"},
+	    {"id":18,"x":294 ,"y":333 , "name":"ChalybeateSprings"},
+	    {"id":19,"x":270 ,"y":413 , "name":"Charleston"},
+	    {"id":20,"x":259 ,"y":486 , "name":"Augustine"},
+	    {"id":21,"x":271 ,"y":510 , "name":"Wildmere"}
+	];  
+
+    var svg = d3.select("body").append("svg")
+	.attr("width",470)
+	.attr("height",599)
+	.attr("id","usMap")
+	.style("background","url('easternUSMapClean.png')");
+    
+    for (var i=0; i<data.length; i++) {
+	svg.append("circle")
+	    .attr("cx",data[i].x)
+	    .attr("cy",data[i].y)
+	    .attr("r", 3)
+	    .style("fill","black")
+	    .attr("title",data[i].name);
+    }
+    
+    var colorPeople = d3.scale.category20();
+
+    d3.json("try_this2.json", function(error, travelers) {
+	console.log(travelers);
+	var trav_box = d3.select("body").select("#Travelers").selectAll("div")
+	    .data(travelers)
+	    .enter()
+	    .append("div");
+	
+	var travelers_selected = [];
+
+	for (var i=0; i<travelers.length;i++) {
+	    travelers_selected.push(false);
+	}
+
+	trav_box.text(function(d) { return d.Person })
+	    .attr("id", function(d) { return d.Person})
+	    .attr("class", "traveler")
+	    .on("click", function(d) {
+		var color = colorPeople(d.id);
+		var me = d3.select(this)
+		if (travelers_selected[d.id]){
+		    me.style("background-color", "white");
+		    travelers_selected[d.id] = false;
+		    var my_lines =d3.select("body").selectAll(".class_"+d.id).remove();
+		}
+		else {
+		    me.style("background-color", color);
+		    travelers_selected[d.id] = true;
+		    for(var j=0;j<d.Trips.length;j++) {
+			drawTrip(d.Trips[j].Place,color, "Philadelphia", d.id);       
+		    }
+		}
+
+	    });
+    });
+
+    function drawTrip(place, color, origin, id) {
+	var c = "class_"+id;
+	var origin_object = lookup_place(origin);
+	var destination_object = lookup_place(place);
+	d3.select("#usMap").append("line")
+	    .attr("x1", origin_object.x)
+	    .attr("y1", origin_object.y)
+	    .attr("x2", destination_object.x)
+	    .attr("y2", destination_object.y)
+	    .attr("stroke-width", 2)
+	    .attr("stroke", color)
+	    .attr("class", c);
+    }
+
+    function lookup_place(place) {
+	for (var i=0;i<data.length;i++) {
+	    if (place == data[i].name) {
+		return data[i];
+	    }
+	}
+
+	return {"x":470,"y":200};
+    }
+
+    </script>	
+    <div id="Travelers">
+
+    </div>
+</body>
+</html>
