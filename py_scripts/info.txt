@@ -1,0 +1,15 @@
+Pre-industrial: before 1780
+Industrial: 1780-1840
+2nd Industrial (Post-Industrial): 1850/1860-1920
+
+Subjects:
+-Look at frequency of subjects per time period (every decade?)
+-Look at frequency of letters per time period (every decade?)
+
+Transcripts:
+-Look through travel transcripts for keywords dealing with religion
+	-Quakerism
+	-Christianity
+-Look for any patterns dealing with keywords
+-separate the letters with transcripts by category
+	-Create a document with all of those letters and transcripts
