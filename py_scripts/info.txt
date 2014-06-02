@@ -11,5 +11,7 @@ Transcripts:
 	-Quakerism
 	-Christianity
 -Look for any patterns dealing with keywords
+
+##########DONE#################
 -separate the letters with transcripts by category
 	-Create a document with all of those letters and transcripts
