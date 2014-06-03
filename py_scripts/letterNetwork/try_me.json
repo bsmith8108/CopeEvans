@@ -332,7 +332,7 @@
 {"name":"RuthReeve:1764-1845", "pageRank":0.00054},
 {"name":"['Bagley&Hewett']", "pageRank":0.00045},
 {"name":"MargaretC.Newbold:b.1821", "pageRank":0.00045},
-{"name":"FrancisCopeYarnall:1830-1890", "pageRank":0.00053},
+{"name":"FrancisCopeYarnall:1830-1890", "pageRank":0.00053}
 ],
 "links": [
 {"source":0, "target":1},
@@ -3424,6 +3424,6 @@
 {"source":200, "target":1},
 {"source":200, "target":28},
 {"source":332, "target":29},
-{"source":332, "target":32},
+{"source":332, "target":32}
 ]
 }

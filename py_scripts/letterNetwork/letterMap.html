@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Letters Map</title>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0;}
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+<div id="map">
+    <script type="text/javascript">
+	var map = L.mapbox.map('map', 'mzarafonetis.idm8dak7')
+	    .setView([40,-74.50],3)
+	    .addControl(L.mapbox.geocoderControl('mzarafonetis.idm8dak7'));
+	
+	var marker = L.marker([0,0], {
+	    icon: L.mapbox.marker.icon({
+		'marker-color':'#f86767'
+	    }),
+	    draggable:true
+	}).addTo(map);
+	
+	latlngs = [
+		    [0,0],
+		    [40,-74.50]
+		  ];
+	var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
+    </script>
+
+</div>
+
+</body>
+</html>
