@@ -58,10 +58,27 @@
 		for (var j=0;j<travel.length;j++) {
 		    var origin = [parseFloat(data[travel[j].Poo].Latitude),parseFloat(data[travel[j].Poo].Longitude)];
 		    var destination = [parseFloat(data[travel[j].Dest].Latitude),parseFloat(data[travel[j].Dest].Longitude)];
-		    console.log("origin", origin)
-		    console.log("destination", destination)
 		    var latlngs = [origin,destination];
 		    var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
+		    try {
+			var info = travel[j].Letter.split("\'").join("\"");
+			info = info.split("\\x").join("");
+			info = JSON.parse(info);
+			info_string = "Creator: " + info.Creator + "<br>";
+			info_string = info_string + "Recipient: " + info.Recipient;
+			line.bindPopup(info_string);
+
+		    }
+		    catch(err) {
+			line.bindPopup("There was an error reading the information");
+			console.log("here");
+		    }
+		    line.on('click', function() {
+			this.openPopup();
+		    });
+		    line.on('dblclick', function(e) {
+			e.layer.closePopup();
+		    });
 		}
 	    });
 	});
