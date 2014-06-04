@@ -1,4 +1,5 @@
 import get_data as gd
+import get_data2 as gd2
 import sys
 
 
@@ -103,24 +104,52 @@ def find_point(name, points):
 
 list_of_dicts = gd.get_data_list_of_dicts()
 
+has_both = []
+for entry in list_of_dicts:
+    if not (entry["Place Of Origin"] == "") and not (entry["Destination"] == ""):
+	has_both.append(entry)
 
-"""
-page_ranks = pageRank(creator_recipient_list,people)
+list_of_places = gd2.get_data_list_of_dicts()
 
-json_string = "{\"nodes\":[\n"
+places = []
+for entry in list_of_places:
+    places.append(entry["Name"])
 
-counter = 0
-for person in people:
-    json_string += "{\"name\":\""+person.getName().replace("\"","'")+"\", \"pageRank\":"+str(page_ranks[counter])+"},\n"
-    counter += 1
+has_full = []
+for item in has_both:
+    # Have to clean the name so it will match the one we have listed
+    # for the places
+    Poo = item["Place Of Origin"].replace(" ","")
+    Poo = Poo.replace("(","COMMA")
+    Poo = Poo.replace(")","COMMA")
+    Poo = Poo.split("COMMA")
+    Poo2 = []
+    for word in Poo:
+	if not word == "":
+	    Poo2.append(word)
+    Poo = Poo2[:]
+    if len(Poo) == 1:
+	Poo = Poo[0]
+    else:
+	Poo = Poo[0] +", "+Poo[1]
+	
+    Dest = item["Destination"].replace(" ","")
+    Dest = Dest.replace("(","COMMA")
+    Dest = Dest.replace(")","COMMA")
+    Dest = Dest.split("COMMA")
+    Dest2 = []
+    for word in Dest:
+	if not word == "":
+	    Dest2.append(word)
+    Dest = Dest2[:]
+    if len(Dest) == 1:
+	Dest = Dest[0]
+    else:
+	Dest = Dest[0] +", "+Dest[1]
 
-json_string += "],\n\"links\": [\n"
+    if Poo in places and Dest in places:
+	has_full.append({"Poo":places.index(Poo),"Dest":places.index(Dest), "Letter":item})
 
-for item in creator_recipient_list:
-    for target in item["target"]:
-	json_string += "{\"source\":" + str(item["source"].getId()) + ", \"target\":" + str(target.getId()) + "},\n"
-    
-json_string += "]\n}"
-
-print json_string
-"""
+filename="letterTravels.csv"
+headers = ["Poo","Dest","Letter"]
+gd.write_data_dicts(filename,headers,has_full)

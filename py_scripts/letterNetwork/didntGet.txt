@@ -1,0 +1,44 @@
+WesttownBoardingSchool
+SteamerPennsylvania
+BeaufortArms, Tintern
+PoconoInn, Pocono
+ProfileHouse
+MaryPowell, ship
+DennisCottage, AtlanticCity
+MencolaCottage, Md.
+Streshire
+Chamounix, Switzerland
+IvyLodgeCottage
+HaverfordSchool, nearBuckP.O.
+HaddonHall, AtlanticCity
+Courbance, France
+HaverfordSchool, BuckTavern
+OldFortComfort
+EastonNorthhamptonCountyPenn
+HaverfordSchool, BuckP.O.
+HaverfordSchool, BuckP.Office
+HaverfordSchool, BuckP.O.
+HaverfordSchoolBuckP.O.
+HaverfordSchool, BuckP.O.LancasterRoad
+EbbitHouse, CapeMay
+GillHouse, HendersonHarbor
+TheCliftonHouse, NiagaraFalls
+SharonInn, Sharon
+TrentonBoardingSchool
+AlhambraHotel, Cimiez-Nice
+HaverfordSchool, BuckP.O.
+BuckTavern, HaverfordSchool
+Wildmere, LakeMinnewaska
+PennCollege, BuckTavern
+HotelSuisse, ViaVeneto
+GlenHouse, WhiteMountain
+BrevoortHouse, FifthAvenue
+TheRuisseaumont, LakePlacid
+Roe'sHotel, WestPoint
+LakeMohonkMountainHouse, MohonkLake
+LakeMohonkLakeHouse, MohonkLake
+Fowler'sRocks, ConanicutIsland
+Fowlers'Rocks
+BucksTavern, HaverfordTownship
+FowlersRocks
+

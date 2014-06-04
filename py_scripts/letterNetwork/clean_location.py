@@ -58,7 +58,7 @@ for loc in locations.keys():
     temp = {}
     temp["Name"] = loc
     temp["Latitude"] = locations[loc][0]
-    temp["Latitude"] = locations[loc][1]
+    temp["Longitude"] = locations[loc][1]
     final.append(temp)
 
 filename = "letterLocation.csv"

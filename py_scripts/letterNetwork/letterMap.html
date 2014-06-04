@@ -3,6 +3,8 @@
     <title>Letters Map</title>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <style>
     body { margin:0; padding:0;}
     #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -15,24 +17,55 @@
 	    .setView([40,-74.50],3)
 	    .addControl(L.mapbox.geocoderControl('mzarafonetis.idm8dak7'));
 	
-	var marker = L.marker([0,0], {
-	    icon: L.mapbox.marker.icon({
-		'marker-color':'#f86767'
-	    }),
-	    draggable:true
-	}).addTo(map);
-	
-	latlngs = [
+	d3.csv("partialCurrectLocations.csv", function(error, data) {
+	    d3.csv("letterTravels.csv", function(error, travel) {
+		console.log("travel",travel)
+		console.log("data",data)
+		for (var i=0; i<data.length; i++) {
+		    var temp = L.mapbox.featureLayer().addTo(map);
+
+		    var geojson = {
+	    	    type: 'FeatureCollection',
+	    	    features: [{
+    			type: 'Feature',
+			    properties: {
+				title: data[i].Name,
+			        'marker-color':'#f86767',
+			        'marker-size':'small'
+			    },
+			    geometry: {
+				type: 'Point',
+				coordinates:[parseFloat(data[i].Longitude),parseFloat(data[i].Latitude)]
+			    }
+			}]
+		    };
+
+		    temp.setGeoJSON(geojson);
+		    temp.on('mouseover', function(e) {
+		        e.layer.openPopup();
+		    });
+		    temp.on('mouseout', function(e) {
+		        e.layer.closePopup();
+		    });
+		}
+		/*
+		latlngs = [
 		    [0,0],
 		    [40,-74.50]
 		  ];
-	var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
-	L.control.layers({
-	    'Bike Stations': L.mapbox.tileLayer('examples.bike-locations'),
-	    'Bike Lanes': L.mapbox.tileLayer('examples.bike-lanes')
-	}).addTo(map);
+		var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
+		*/
+		for (var j=0;j<travel.length;j++) {
+		    var origin = [parseFloat(data[travel[j].Poo].Latitude),parseFloat(data[travel[j].Poo].Longitude)];
+		    var destination = [parseFloat(data[travel[j].Dest].Latitude),parseFloat(data[travel[j].Dest].Longitude)];
+		    console.log("origin", origin)
+		    console.log("destination", destination)
+		    var latlngs = [origin,destination];
+		    var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
+		}
+	    });
+	});
     </script>
-
 </div>
 
 </body>
