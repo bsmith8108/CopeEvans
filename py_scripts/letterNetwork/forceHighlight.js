@@ -62,37 +62,6 @@ d3.json("try_me.json", function(error, graph) {
       .links(links)
       .start();
 
-  var link = svg.selectAll(".link")
-      .data(graph.links)
-    .enter().append("line")
-      .attr("class", "link")
-      .style("stroke-width", function(d) { return Math.sqrt(d.value); });
-
-  var node = svg.selectAll(".node")
-      .data(graph.nodes)
-    .enter().append("circle")
-      .attr("class", "node")
-      .attr("id", function(d) {return "node"+d.index.toString();})
-      .attr("r", function(d) { return Math.sqrt(d.pageRank*10000) })
-      .style("fill", function(d) { return color(d.group); })
-      .call(force.drag)
-      .on("mousedown", function(d) {
-	    var node = d3.select(this);
-	    node.style("fill","red");
-	    if(!selected[d.name]) {
-		d3.select("#people").append("a")
-		    .html(d.name)
-		    .attr("class","person")
-		    .attr("href","test.html")
-		    .attr("rel","group")
-		    .attr("data-fancybox-type","iframe");
-		selected[d.name] = true;
-	    }
-	});
-
-  node.append("title")
-      .text(function(d) { return d.name; });
-
   var selected = {};
 
   var brush = svg.append("g")
@@ -130,6 +99,43 @@ d3.json("try_me.json", function(error, graph) {
           d3.event.target.clear();
           d3.select(this).call(d3.event.target);
         }));
+  
+  var linkLayer = svg.append("g");
+
+  var link = linkLayer.selectAll(".link")
+      .data(graph.links)
+    .enter().append("line")
+      .attr("class", "link")
+      .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+  var nodelayer = svg.append("g")
+	.attr("class","node")
+    
+  var node = nodelayer.selectAll("circle")
+      .data(graph.nodes)
+    .enter().append("circle")
+      .attr("class", "node")
+      .attr("id", function(d) {return "node"+d.index.toString();})
+      .attr("r", function(d) { return Math.sqrt(d.pageRank*10000) })
+      .style("fill", function(d) { return color(d.group); })
+      .call(force.drag)
+      .on("mousedown", function(d) {
+	    var node = d3.select(this);
+	    node.style("fill","red");
+	    if(!selected[d.name]) {
+		d3.select("#people").append("a")
+		    .html(d.name)
+		    .attr("class","person")
+		    .attr("href","test.html")
+		    .attr("rel","group")
+		    .attr("data-fancybox-type","iframe");
+		selected[d.name] = true;
+	    }
+	});
+
+  node.append("title")
+      .text(function(d) { return d.name; });
+
 
   var n = 50;
   var r = 3;
