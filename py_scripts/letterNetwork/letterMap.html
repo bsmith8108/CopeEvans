@@ -27,6 +27,10 @@
 		    [40,-74.50]
 		  ];
 	var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
+	L.control.layers({
+	    'Bike Stations': L.mapbox.tileLayer('examples.bike-locations'),
+	    'Bike Lanes': L.mapbox.tileLayer('examples.bike-lanes')
+	}).addTo(map);
     </script>
 
 </div>
