@@ -87,6 +87,7 @@ d3.json("try_me.json", function(error, graph) {
 			.html(d.name)
 			.attr("class","person")
 			.attr("href","test.html")
+			.attr("id","show"+d.index.toString())
 			.attr("rel","group")
 			.attr("data-fancybox-type","iframe");
 		    selected[d.name] = true;
@@ -110,6 +111,8 @@ d3.json("try_me.json", function(error, graph) {
 
   var nodelayer = svg.append("g")
 	.attr("class","node")
+	.attr("height",height)
+	.attr("width",width);
     
   var node = nodelayer.selectAll("circle")
       .data(graph.nodes)
