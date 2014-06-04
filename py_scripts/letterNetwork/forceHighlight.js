@@ -121,15 +121,21 @@ d3.json("try_me.json", function(error, graph) {
       .call(force.drag)
       .on("mousedown", function(d) {
 	    var node = d3.select(this);
-	    node.style("fill","red");
 	    if(!selected[d.name]) {
+	    	node.style("fill","red");
 		d3.select("#people").append("a")
 		    .html(d.name)
 		    .attr("class","person")
 		    .attr("href","test.html")
 		    .attr("rel","group")
+		    .attr("id","show"+d.index.toString())
 		    .attr("data-fancybox-type","iframe");
 		selected[d.name] = true;
+	    }
+	    else {	
+		node.style("fill",color(undefined));
+		selected[d.name]=false;
+		d3.select("#show"+d.index.toString()).remove();
 	    }
 	});
 
