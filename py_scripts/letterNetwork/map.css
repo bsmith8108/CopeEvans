@@ -1,0 +1,49 @@
+body { 
+margin:0; 
+padding:0;
+}
+
+#map { 
+position:absolute; 
+top:40; 
+bottom:0; 
+width:100%; 
+}
+
+#guide { 
+position:absolute; 
+top:0; 
+bottom:40; 
+left:30px; 
+font-size:20px; 
+line-height:40px; 
+color:grey;  
+}
+
+#footer { 
+position:absolute; 
+bottom:0; 
+height:60px; 
+opacity:.3; 
+background-color:black; 
+width:100%; 
+}
+
+#footer-wrapper {
+opacity:1;
+color:white;
+}
+
+li {
+font-weight:bold;
+list-style-type:none;
+display:inline-block;
+background-color:lightblue;
+padding:10px;
+border-radius:10px;
+margin-right:20px;
+}
+ul {
+margin:0px;
+margin-top:10px;
+}
