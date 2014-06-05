@@ -1,7 +1,7 @@
 import get_data as gd
 import get_data2 as gd2
 import sys
-
+import json
 
 # Now that we have the list of people connected with who they sent
 # a letter to, we can calculate PageRank
@@ -148,7 +148,8 @@ for item in has_both:
 	Dest = Dest[0] +", "+Dest[1]
 
     if Poo in places and Dest in places:
-	has_full.append({"Poo":places.index(Poo),"Dest":places.index(Dest), "Letter":item})
+	my_json = json.dumps(item)
+	has_full.append({"Poo":places.index(Poo),"Dest":places.index(Dest), "Letter":my_json})
 
 filename="letterTravels.csv"
 headers = ["Poo","Dest","Letter"]

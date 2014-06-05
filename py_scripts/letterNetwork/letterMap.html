@@ -1,14 +1,42 @@
 <html>
 <head>
     <title>Letters Map</title>
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
     <style>
     body { margin:0; padding:0;}
     #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
+    <script type="text/javascript">
+    $(document).ready(function ()
+    {
+        function myfunction(me)
+	    {
+		$(me).fancybox({
+		    'autoScale': true,
+		    'transitionIn': 'elastic',
+		    'transitionOut': 'elastic',
+		    'speedIn': 500,
+		    'speedOut': 300,
+		    'autoDimensions': true,
+		    'centerOnScroll': true // remove the trailing comma!!
+		}).click();
+		console.log("here")
+		// fire the click event after initializing fancybox on this element
+		// this should open the fancybox
+	    }
+
+	// use .one() so that the handler is executed at most once per element
+	$('path').one('click', function (){
+	    myfunction(this);
+	    return false;
+	});
+    });
+    </script>
 </head>
 <body>
 <div id="map">
@@ -55,30 +83,36 @@
 		  ];
 		var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
 		*/
+		info_list = [];
+		var counter = 0;
 		for (var j=0;j<travel.length;j++) {
 		    var origin = [parseFloat(data[travel[j].Poo].Latitude),parseFloat(data[travel[j].Poo].Longitude)];
 		    var destination = [parseFloat(data[travel[j].Dest].Latitude),parseFloat(data[travel[j].Dest].Longitude)];
 		    var latlngs = [origin,destination];
-		    var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
-		    try {
-			var info = travel[j].Letter.split("\'").join("\"");
-			info = info.split("\\x").join("");
-			info = JSON.parse(info);
-			info_string = "Creator: " + info.Creator + "<br>";
-			info_string = info_string + "Recipient: " + info.Recipient;
-			line.bindPopup(info_string);
+		    var info = travel[j].Letter;
+		    info = JSON.parse(info);
+		    var t_Has = info.Transcript.split(" ").length;
+		    if (t_Has > 2) {
+			var line = L.polyline(latlngs, {color: 'green', weight:3}).addTo(map);
+		    }
+		    else {
+			var line = L.polyline(latlngs, {color: 'red', weight:3}).addTo(map);
+		    }
+		    var info_string = "<h2>"+info.Title.split("COMMA").join(",")+"</h2>";
+		    info_string = info_string + "Creator: " + info.Creator + "<br>";
+		    info_string = info_string + "Recipient: " + info.Recipient;
+		    info_string = info_string + "<br>Transcript: <br>" + info.Transcript.split("COMMA").join(",");
+		    info_list[line._leaflet_id] = info_string;
 
-		    }
-		    catch(err) {
-			line.bindPopup("There was an error reading the information");
-			console.log("here");
-		    }
-		    line.on('click', function() {
-			this.openPopup();
+		    line.on('click', function(e) {
+			openFancyBox(e.target._leaflet_id);
 		    });
-		    line.on('dblclick', function(e) {
-			e.layer.closePopup();
-		    });
+
+		    counter++;
+		}
+		
+		function openFancyBox(id) {
+		    $.fancybox.open(info_list[id]);
 		}
 	    });
 	});
