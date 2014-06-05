@@ -60,7 +60,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    info_string = info_string + "Recipient: " + info.Recipient;
 	    info_string = info_string + "<br>Transcript: <br>" + info.Transcript.split("COMMA").join(",");
 	    info_list[line._leaflet_id] = info_string;
-
+	    
 	    line.on('click', function(e) {
 		openFancyBox(e.target._leaflet_id);
 	    });

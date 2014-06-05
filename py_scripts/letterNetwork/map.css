@@ -24,26 +24,49 @@ color:grey;
 position:absolute; 
 bottom:0; 
 height:60px; 
-opacity:.3; 
-background-color:black; 
 width:100%; 
 }
 
 #footer-wrapper {
-opacity:1;
-color:white;
+bottom:10;
+position:absolute;
+}
+#footer-transparent { 
+position:absolute; 
+bottom:0; 
+height:60px; 
+opacity:.3; 
+background-color:black; 
+width:100%; 
 }
 
 li {
 font-weight:bold;
 list-style-type:none;
 display:inline-block;
-background-color:lightblue;
+background-color:#67D6E5;
 padding:10px;
 border-radius:10px;
 margin-right:20px;
+color:grey;
+cursor:pointer;
 }
+
 ul {
 margin:0px;
 margin-top:10px;
+}
+
+#timeline {
+bottom:-5px;
+height:200px;
+width:100%;
+background-color:white;
+}
+
+#filter {
+bottom:-5px;
+height:200px;
+width:100%;
+background-color:white;
 }
