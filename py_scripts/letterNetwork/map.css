@@ -48,7 +48,7 @@ background-color:#67D6E5;
 padding:10px;
 border-radius:10px;
 margin-right:20px;
-color:grey;
+color:black;
 cursor:pointer;
 }
 
@@ -72,6 +72,7 @@ background-color:white;
 }
 
 .filter-button {
+text-align:center;
 padding:5px;
 margin-bottom:7px;
 margin-left:15px;
@@ -89,4 +90,17 @@ padding:10px;
 
 .col {
 float:left;
+}
+
+.options-button {
+text-align:center;
+padding:5px;
+margin-bottom:7px;
+margin-left:15px;
+margin-right:10px;
+margin-top:7px;
+border-radius:5px;
+background-color:steelblue;
+cursor:pointer;
+width:100px;
 }
