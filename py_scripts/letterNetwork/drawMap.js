@@ -64,7 +64,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    });
 	}
 	
-	var all_paths = $("path");
+	var all_paths = $("path.leaflet-clickable");
 	for (var k=0;k<all_paths.length; k++) {
 	    $(all_paths[k]).attr("id","letter"+toString(k));
 	}
@@ -149,7 +149,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	function filterMap() {
 	    var filterNames = {"age":"Age of Author","gender":"Gender of Author","family":"Family","transcript":"Transcript","subject":"Subject"};
 	    var keys = ["age","gender","family","transcript","subject"];
-	    var lines= $("path");
+	    var lines= $("path.leaflet-clickable");
 	    var keys_used = [];
 	    for (var i=0; i<keys.length; i++) {
 		if(filterDict[keys[i]].length > 0) {
@@ -212,6 +212,111 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 
 	    return "Other";
 	}
+	/*################# CODE TO CREATE THE CATEGORICAL FILTERS ABOVE #####################
+	Variables I need from above:
+	    -line_info_list
+
+	###################### CODE TO CREATE THE TIMELINE BELOW ###########################*/
+	
+	// The call to the makeTimeline function will be needed on load, just easier to separate
+	// into its own function, in case it needs to me moved
+
+	function makeTimeline() {
+	    var margin = {top: 0, right: 40, bottom: 50, left: 40},
+		width = 960 - margin.left - margin.right,
+		height = 100 - margin.top - margin.bottom;
+
+	    var x = d3.time.scale()
+		.domain([new Date(1819, 11, 1), new Date(1920, 1, 1) - 1])
+		.range([0, width]);
+
+	    var brush = d3.svg.brush()
+		.x(x)
+		.extent([new Date(2013, 7, 2), new Date(2013, 7, 3)])
+		.on("brush", brush)
+		.on("brushstart",brushstarted);
+
+	    var svg = d3.select("body").select("#footer").select("#timeline-inside").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	      .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	    svg.append("rect")
+		.attr("class", "grid-background")
+		.attr("width", width)
+		.attr("height", height);
+
+	    svg.append("g")
+		.attr("class", "x grid")
+		.attr("transform", "translate(0," + height + ")")
+		.call(d3.svg.axis()
+		    .scale(x)
+		    .orient("bottom")
+		    .ticks(d3.time.years, 10)
+		    .tickSize(-height)
+		    .tickFormat(""))
+	      .selectAll(".tick")
+		.classed("minor", function(d) { return d.getHours(); });
+
+	    svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(d3.svg.axis()
+		.scale(x)
+		.orient("bottom")
+		.ticks(d3.time.years,10)
+		.tickPadding(0))
+	      .selectAll("text")
+		.attr("x", 6)
+		.style("text-anchor", null);
+
+	    var gBrush = svg.append("g")
+		.attr("class", "brush")
+		.call(brush)
+		.call(brush.event);
+
+	    gBrush.selectAll("rect")
+		.attr("height", height);
+
+	    function brush() {
+		if (!d3.event.sourceEvent) return; // only transition after input
+		var extent0 = brush.extent(),
+		extent1 = extent0.map(d3.time.year.round);
+
+		// if empty when rounded, use floor & ceil instead
+		if (extent1[0] >= extent1[1]) {
+		    extent1[0] = d3.time.year.floor(extent0[0]);
+		    extent1[1] = d3.time.year.ceil(extent0[1]);
+		}
+	  
+		var startYear = extent1[0].getFullYear();
+		var endYear = extent1[1].getFullYear();
+		var re = new RegExp("[0-9][0-9][0-9][0-9]")
+		var lines = $("path.leaflet-clickable");
+		
+		for (var i=0;i<lines.length; i++) {
+		    line_json = line_info_list[i];
+		    var myYear = getYear(line_json["Date"]);
+		    if (myYear > startYear && myYear < endYear) {
+			$(lines[i]).css("visibility","visible");
+		    }
+		    else {
+			$(lines[i]).css("visibility","hidden");
+		    }
+		}
+	    }
+	    
+	    function getYear(date_string) {
+		date_list = date_string.split("-");
+		return date_list[0];
+	    }
+	    function brushstarted() {
+		console.log("here");
+	    }
+	}
+
+	makeTimeline();
     });
 });
 

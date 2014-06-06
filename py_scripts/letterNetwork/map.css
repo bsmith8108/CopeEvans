@@ -59,9 +59,13 @@ margin-top:10px;
 
 #timeline {
 bottom:-5px;
-height:200px;
+height:100px;
 width:100%;
 background-color:white;
+}
+
+#timeline-inside {
+padding-top:10px;
 }
 
 #filter {
@@ -81,7 +85,7 @@ margin-top:7px;
 border-radius:5px;
 background-color:steelblue;
 cursor:pointer;
-width:100px;
+width:200px;
 }
 
 #filter-list {
@@ -104,3 +108,39 @@ background-color:steelblue;
 cursor:pointer;
 width:100px;
 }
+
+.axis text {
+  font: 11px sans-serif;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.grid-background {
+  fill: #ddd;
+}
+
+.grid line,
+.grid path {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.grid .minor.tick line {
+  stroke-opacity: .5;
+}
+
+.brush .extent {
+  stroke: #000;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+	 

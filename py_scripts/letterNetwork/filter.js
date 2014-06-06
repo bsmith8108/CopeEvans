@@ -1,17 +1,21 @@
 $(document).ready(function() {
     var is_up = [true,true];
     var slideHeight = 150;
+    var timelineHeight = 100;
     
-    $("#timeline").css({"display":"none","height":slideHeight});
+    $("#timeline").css({"display":"none","height":timelineHeight});
     $("#filter").css({"display":"none","height":slideHeight});
 
 
     $("#timeline-button").click(function() {
 	if (is_up[0]) {
+	    if ($("#filter").css("display") == "block") {
+		$("#filters-button").click();
+	    }
 	    $("#timeline").css("display","block");
-	    $("#footer-wrapper").css("bottom", slideHeight+15);
-	    $("#footer").css("height",slideHeight);
-	    $("#footer-transparent").css("bottom", slideHeight);
+	    $("#footer-wrapper").css("bottom", timelineHeight+15);
+	    $("#footer").css("height",timelineHeight);
+	    $("#footer-transparent").css("bottom", timelineHeight);
 	    is_up[0] = false;
 	}
 	else {
@@ -25,6 +29,9 @@ $(document).ready(function() {
 
     $("#filters-button").click(function() {
 	if (is_up[1]) {
+	    if ($("#timeline").css("display") == "block") {
+		$("#timeline-button").click();
+	    }
 	    $("#filter").css("display","block")
 	    $("#footer").css("height",slideHeight);
 	    $("#footer-wrapper").css("bottom",slideHeight+15);
