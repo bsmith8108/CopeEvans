@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $(".people-select").fancybox();
+    
     var is_up = [true,true];
     var slideHeight = 150;
     var timelineHeight = 100;

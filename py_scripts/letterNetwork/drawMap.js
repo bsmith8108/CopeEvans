@@ -4,6 +4,7 @@ var map = L.mapbox.map('map', 'mzarafonetis.idm8dak7')
 
 var line_info_list = [];
 var line_info_dict = {};
+var filterDict = {"age":[],"gender":[],"family":[],"transcript":[],"subject":[], "author":[]};
 
 d3.csv("partialCurrectLocations.csv", function(error, data) {
     d3.csv("letterTravels.csv", function(error, travel) {
@@ -79,11 +80,9 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    showFilterOptions(name);
 	});
 
-	var filterDict = {"age":[],"gender":[],"family":[],"transcript":[],"subject":[]};
 	
 	function showFilterOptions(name){
-	    console.log(name);
-	    var filterNames = {"age":"Age","gender":"Gender","family":"Creator","transcript":"Transcript","subject":"Subject"};
+	    var filterNames = {"age":"Age","gender":"Gender","family":"Creator","transcript":"Transcript","subject":"Subject","author":"Author"};
 	    var optionsBox = $("#options");
 	    var filterOptions = {"age":["0-10","10-20","20-30","30-40","40-50","50-60","60-70","70-80","80-90","90-100"],
 				 "gender":["M","F"],
@@ -95,22 +94,30 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    var myFilterOptions = filterOptions[name];
 	    var counter = 0;
 	    optionsBox.append("<div class=\"col\"><h2>Options:</h2></div>");
-	    for (var i=0; i<myFilterOptions.length; i++) {
-		if (i%3 == 0) {
-		    optionsBox.append("<div class=\"col\" id=\"optionCol"+counter.toString()+"\">");
-		    currentBox = $("#optionCol"+counter.toString());
-		    counter++;
-		}
-		currentBox.append("<div class=\"options-button\" id=\""+myFilterOptions[i]+"\">"+myFilterOptions[i]+"</div>")
-		var newItem = $("#"+myFilterOptions[i]);
-		if (filterDict[name].indexOf(myFilterOptions[i]) > -1) {
-		    newItem.css("background-color","yellow");
-		}
-		if (i%3 == 2) {
-		    optionsBox.append("</div>");
+	    if (name == "author") {
+		optionsBox.append("<div class=\"col\" id=\"authorSelect\">");
+		var current =$("#authorSelect");
+		current.append("<a href=\"pageRank.html\" data-fancybox-type=\"iframe\" class=\"people-select\"><div class=\"options-button\" id=\"AboutPR\">About the Network</div></a>");
+		current.append("<a href=\"index.html\" data-fancybox-type=\"iframe\" id=\"authorsFrame\" class=\"people-select\"><div class=\"options-button\" id=\"selectAuthor\">Select authors</div></a>");
+		optionsBox.append("</div>");
+	    }
+	    else {
+		for (var i=0; i<myFilterOptions.length; i++) {
+		    if (i%3 == 0) {
+			optionsBox.append("<div class=\"col\" id=\"optionCol"+counter.toString()+"\">");
+			currentBox = $("#optionCol"+counter.toString());
+			counter++;
+		    }
+		    currentBox.append("<div class=\"options-button\" id=\""+myFilterOptions[i]+"\">"+myFilterOptions[i]+"</div>")
+		    var newItem = $("#"+myFilterOptions[i]);
+		    if (filterDict[name].indexOf(myFilterOptions[i]) > -1) {
+			newItem.css("background-color","yellow");
+		    }
+		    if (i%3 == 2) {
+			optionsBox.append("</div>");
+		    }
 		}
 	    }
-	    
 
 	    $(".options-button").click(function(d) {
 		var option = d.currentTarget.id;
@@ -147,6 +154,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	}
     
 	function filterMap() {
+	    console.log("poop")
 	    var filterNames = {"age":"Age of Author","gender":"Gender of Author","family":"Family","transcript":"Transcript","subject":"Subject"};
 	    var keys = ["age","gender","family","transcript","subject"];
 	    var lines= $("path.leaflet-clickable");

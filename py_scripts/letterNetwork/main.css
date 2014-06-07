@@ -1,3 +1,14 @@
+#select {
+font-size:20px;
+background-color:steelblue;
+border-radius:5px;
+text-align:center;
+width:200px;
+margin:10px;
+padding:5px;
+cursor:pointer;
+}
+
 .node {
   stroke: #fff;
   stroke-width: 1.5px;
