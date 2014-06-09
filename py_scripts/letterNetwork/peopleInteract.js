@@ -10,7 +10,8 @@ $(document).ready(function() {
 	console.log("names: ", names);
 	console.log("filterDict: ", parent.filterDict);
 	parent.filterDict["author"] = names;
-	console.log(parent)
 	parent.filterMap();
+	parent.updateNameBox(names);
+	parent.closeIframe();
     });
 });

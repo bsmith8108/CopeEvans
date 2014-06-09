@@ -4,7 +4,8 @@ var map = L.mapbox.map('map', 'mzarafonetis.idm8dak7')
 
 var line_info_list = [];
 var line_info_dict = {};
-var filterDict = {"age":[],"gender":[],"family":[],"transcript":[],"subject":[], "author":[]};
+var filterDict = {"age":[],"gender":[],"family":[],"transcript":[],"subject":[], "author":[],"date":[]};
+var brush;
 
 d3.csv("partialCurrectLocations.csv", function(error, data) {
     d3.csv("letterTravels.csv", function(error, travel) {
@@ -99,6 +100,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 		var current =$("#authorSelect");
 		current.append("<a href=\"pageRank.html\" data-fancybox-type=\"iframe\" class=\"people-select\"><div class=\"options-button\" id=\"AboutPR\">About the Network</div></a>");
 		current.append("<a href=\"index.html\" data-fancybox-type=\"iframe\" id=\"authorsFrame\" class=\"people-select\"><div class=\"options-button\" id=\"selectAuthor\">Select authors</div></a>");
+		updateNameBox();
 		optionsBox.append("</div>");
 	    }
 	    else {
@@ -153,73 +155,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	   }
 	}
     
-	function filterMap() {
-	    console.log("poop")
-	    var filterNames = {"age":"Age of Author","gender":"Gender of Author","family":"Family","transcript":"Transcript","subject":"Subject"};
-	    var keys = ["age","gender","family","transcript","subject"];
-	    var lines= $("path.leaflet-clickable");
-	    var keys_used = [];
-	    for (var i=0; i<keys.length; i++) {
-		if(filterDict[keys[i]].length > 0) {
-		    keys_used.push(keys[i]);;
-		}
-	    }  
 
-	    for (var j=0; j<lines.length; j++) {
-		var shouldAdd = true;
-		var line_json =line_info_list[j];
-		var family = findFamily(line_json["Creator"])
-		line_json["Family"] = family;
-		for (var k=0; k<keys_used.length;k++) {
-		    var keyAllGood = false;
-		    var myKey = keys_used[k];
-		    if (!(myKey == "transcript")) {
-			for (var m=0; m<filterDict[myKey].length; m++) {
-			    if (line_json[filterNames[myKey]] == filterDict[myKey][m]) {
-				keyAllGood = true;
-			    }
-			}
-		    }
-		    else {
-			if(line_json["Transcript"].split(" ").length < 2 && filterDict[myKey].indexOf("No Transcript") > -1) {
-			    keyAllGood = true;
-			}
-			else if(line_json["Transcript"].split(" ").length >= 2 && filterDict[myKey].indexOf("Has Transcript") > -1) {
-			    keyAllGood = true;
-			}
-			else {
-			    keyAllGood = false;
-			}
-		    }
-		    if (!keyAllGood) {
-		        shouldAdd = false;
-		    }
-		}
-
-		if(shouldAdd) {
-		    $(lines[j]).css("visibility","visible");
-		}
-		else {
-		    $(lines[j]).css("visibility","hidden");
-		}
-	    }
-	}
-	
-	function findFamily(name) {
-	    var split_name = name.split(/(?=[A-Z])/);
-	    for (var i=0;i<split_name.length;i++) {
-		split_name[i] = split_name[i].replace(/[^a-zA-z]/g,"");
-	    }
-
-	    var family_names = ["Cope","Evans","Drinker","Stokes","Tyson"];
-	    for (var i=split_name.length-1; i>=0; i--) {
-		if (family_names.indexOf(split_name[i]) > -1) {
-		    return split_name[i];
-		}
-	    }
-
-	    return "Other";
-	}
 	/*################# CODE TO CREATE THE CATEGORICAL FILTERS ABOVE #####################
 	Variables I need from above:
 	    -line_info_list
@@ -238,7 +174,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 		.domain([new Date(1819, 11, 1), new Date(1920, 1, 1) - 1])
 		.range([0, width]);
 
-	    var brush = d3.svg.brush()
+	    brush = d3.svg.brush()
 		.x(x)
 		.extent([new Date(2013, 7, 2), new Date(2013, 7, 3)])
 		.on("brush", brush)
@@ -303,22 +239,10 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 		var re = new RegExp("[0-9][0-9][0-9][0-9]")
 		var lines = $("path.leaflet-clickable");
 		
-		for (var i=0;i<lines.length; i++) {
-		    line_json = line_info_list[i];
-		    var myYear = getYear(line_json["Date"]);
-		    if (myYear > startYear && myYear < endYear) {
-			$(lines[i]).css("visibility","visible");
-		    }
-		    else {
-			$(lines[i]).css("visibility","hidden");
-		    }
-		}
+		filterDict["date"] = [startYear, endYear];
+		filterMap();
 	    }
 	    
-	    function getYear(date_string) {
-		date_list = date_string.split("-");
-		return date_list[0];
-	    }
 	    function brushstarted() {
 		console.log("here");
 	    }
@@ -328,3 +252,114 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
     });
 });
 
+function getYear(date_string) {
+    date_list = date_string.split("-");
+    return date_list[0];
+}
+
+function filterMap() {
+    var filterNames = {"age":"Age of Author","gender":"Gender of Author","family":"Family","transcript":"Transcript","subject":"Subject","author":"Creator", "date":"Date"};
+    var keys = ["age","gender","family","transcript","subject","author","date"];
+    var lines= $("path.leaflet-clickable");
+    var keys_used = [];
+    for (var i=0; i<keys.length; i++) {
+	if(filterDict[keys[i]].length > 0) {
+	    keys_used.push(keys[i]);
+	}
+    } 
+    
+    for (var j=0; j<lines.length; j++) {
+	var shouldAdd = true;
+	var line_json =line_info_list[j];
+	var family = findFamily(line_json["Creator"])
+	line_json["Family"] = family;
+	for (var k=0; k<keys_used.length;k++) {
+	    var keyAllGood = false;
+	    var myKey = keys_used[k];
+	    if (myKey == "date") {
+		var myYear = getYear(line_json["Date"]);
+		if (myYear > filterDict["date"][0] && filterDict["date"][1] > myYear) {
+		    keyAllGood = true;
+		}
+	    }
+	    else if (!(myKey == "transcript")) {
+		for (var m=0; m<filterDict[myKey].length; m++) {
+		    var myValue;
+		    if (myKey == "author") {
+			line_json[filterNames[myKey]] = line_json[filterNames[myKey]].split(" ").join("");
+		    }
+		    
+		    if (line_json[filterNames[myKey]] == filterDict[myKey][m]) {
+			keyAllGood = true;
+		    }
+		}
+	    }
+	    else {
+		if(line_json["Transcript"].split(" ").length < 2 && filterDict[myKey].indexOf("No Transcript") > -1) {
+		    keyAllGood = true;
+		}
+		else if(line_json["Transcript"].split(" ").length >= 2 && filterDict[myKey].indexOf("Has Transcript") > -1) {
+		    keyAllGood = true;
+		}
+		else {
+		    keyAllGood = false;
+		}
+	    }
+	    if (!keyAllGood) {
+		shouldAdd = false;
+	    }
+	}
+
+	if(shouldAdd) {
+	    $(lines[j]).css("visibility","visible");
+	}
+	else {
+	    $(lines[j]).css("visibility","hidden");
+	}
+    }
+}
+
+function findFamily(name) {
+    var split_name = name.split(/(?=[A-Z])/);
+    for (var i=0;i<split_name.length;i++) {
+	split_name[i] = split_name[i].replace(/[^a-zA-z]/g,"");
+    }
+
+    var family_names = ["Cope","Evans","Drinker","Stokes","Tyson"];
+    for (var i=split_name.length-1; i>=0; i--) {
+	if (family_names.indexOf(split_name[i]) > -1) {
+	    return split_name[i];
+	}
+    }
+
+    return "Other";
+}
+
+function updateNameBox() {
+    var names = filterDict["author"];
+    var list = $("#peopleList");
+    console.log("list: ", list.length);
+    if (list.length == 0) {
+	$("#options").append("<div class=\"col\" id=\"peopleList\" style=\"overflow-y:scroll;width:300px;height:120px;\">");
+    }
+    var myCol = $("#peopleList");
+
+    for (var i=0; i<names.length; i++) {
+	myCol.append(names[i].split(/(?=[A-Z])/).join(" ")+"<br>");
+    }
+    $("#options").append("</div>");
+}
+function closeIframe() {
+    $.fancybox.close();
+}
+
+function clearBrush() {
+    $('.extent').attr("width","0");
+}
+
+function resetFilters() {
+    filterDict = {"age":[],"gender":[],"family":[],"transcript":[],"subject":[], "author":[],"date":[]};
+    var options = $(".options-button").css("background-color","steelblue");
+    clearBrush();
+    filterMap();
+}

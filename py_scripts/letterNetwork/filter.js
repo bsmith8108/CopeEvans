@@ -1,5 +1,8 @@
 $(document).ready(function() {
     $(".people-select").fancybox();
+    $("#reset-button").click(function() {
+	resetFilters()
+    });
     
     var is_up = [true,true];
     var slideHeight = 150;
