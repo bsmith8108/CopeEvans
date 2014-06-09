@@ -148,49 +148,44 @@ def get_subjects(list_of_dicts):
 	    if not inBin:
 		unidentified.append(subjects)
 	
-	return [travel_bin, education_bin, love_bin, health_bin, family_bin, religion_bin, political_vin, lifestyle_bin]
+	"""
+	total = len(travel_bin)+len(education_bin)+len(love_bin)+len(health_bin)+len(family_bin)+len(religion_bin)+len(political_bin)+len(lifestyle_bin)
+	print "BIN\t   |   LENGTH  |	MIN AGE	    |	MAX AGE"
+	print "travel:\t\t" + str(len(travel_bin))+"\t\t"+str(min_age[0])+"\t\t"+str(max_age[0])
+	print "education:\t" + str(len(education_bin))+"\t\t"+str(min_age[1])+"\t\t"+str(max_age[1])
+	print "love:\t\t" + str(len(love_bin))+"\t\t"+str(min_age[2])+"\t\t"+str(max_age[2])
+	print "health:\t\t" + str(len(health_bin))+"\t\t"+str(min_age[3])+"\t\t"+str(max_age[3])
+	print "family:\t\t" + str(len(family_bin))+"\t\t"+str(min_age[4])+"\t\t"+str(max_age[4])
+	print "religion:\t" + str(len(religion_bin))+"\t\t"+str(min_age[5])+"\t\t"+str(max_age[5])
+	print "political:\t" + str(len(political_bin))+"\t\t"+str(min_age[6])+"\t\t"+str(max_age[6])
+	print "lifestyle:\t" + str(len(lifestyle_bin))+"\t\t"+str(min_age[7])+"\t\t"+str(max_age[7])
+	print "---------------------------------------------"
+	print "Total:\t\t" + str(total)
+	print "---------------------------------------------"
+	print "unidentified:	 " + str(len(unidentified))
+	print "max_age: " + str(max_age)
+	print "min_age: " + str(min_age)
+	print
+	print "Distribution:"
+	print "\t\t0-10\t10-20\t20-30\t30-40\t40-50\t50-60\t60-70\t70-80\t80-90\t90-100\tunkown"
+	age_strings = []
+	for entry in age_count:
+	    temp = ""
+	    for item in entry:
+		temp += str(item) + "\t"
+	    age_strings.append(temp)
+	print "travel:\t\t"+age_strings[0] 
+	print "education:\t"+age_strings[1]
+	print "love:\t\t"+age_strings[2]
+	print "health:\t\t" +age_strings[3]
+	print "family:\t\t" +age_strings[4]
+	print "religion:\t" +age_strings[5]
+	print "political:\t"+age_strings[6]
+	print "lifestyle:\t"+age_strings[7]
 
-"""
-The below code prints out the results of the above in a nice tabular format
+	filename = "organized.csv"
+	headers = gd.get_headers()
+	gd.write_data_dicts(filename, headers, has_subject)
+	"""
 
-total = len(travel_bin)+len(education_bin)+len(love_bin)+len(health_bin)+len(family_bin)+len(religion_bin)+len(political_bin)+len(lifestyle_bin)
-print "BIN\t   |   LENGTH  |	MIN AGE	    |	MAX AGE"
-print "travel:\t\t" + str(len(travel_bin))+"\t\t"+str(min_age[0])+"\t\t"+str(max_age[0])
-print "education:\t" + str(len(education_bin))+"\t\t"+str(min_age[1])+"\t\t"+str(max_age[1])
-print "love:\t\t" + str(len(love_bin))+"\t\t"+str(min_age[2])+"\t\t"+str(max_age[2])
-print "health:\t\t" + str(len(health_bin))+"\t\t"+str(min_age[3])+"\t\t"+str(max_age[3])
-print "family:\t\t" + str(len(family_bin))+"\t\t"+str(min_age[4])+"\t\t"+str(max_age[4])
-print "religion:\t" + str(len(religion_bin))+"\t\t"+str(min_age[5])+"\t\t"+str(max_age[5])
-print "political:\t" + str(len(political_bin))+"\t\t"+str(min_age[6])+"\t\t"+str(max_age[6])
-print "lifestyle:\t" + str(len(lifestyle_bin))+"\t\t"+str(min_age[7])+"\t\t"+str(max_age[7])
-print "---------------------------------------------"
-print "Total:\t\t" + str(total)
-print "---------------------------------------------"
-print "unidentified:	 " + str(len(unidentified))
-print "max_age: " + str(max_age)
-print "min_age: " + str(min_age)
-print
-print "Distribution:"
-print "\t\t0-10\t10-20\t20-30\t30-40\t40-50\t50-60\t60-70\t70-80\t80-90\t90-100\tunkown"
-age_strings = []
-for entry in age_count:
-    temp = ""
-    for item in entry:
-	temp += str(item) + "\t"
-    age_strings.append(temp)
-print "travel:\t\t"+age_strings[0] 
-print "education:\t"+age_strings[1]
-print "love:\t\t"+age_strings[2]
-print "health:\t\t" +age_strings[3]
-print "family:\t\t" +age_strings[4]
-print "religion:\t" +age_strings[5]
-print "political:\t"+age_strings[6]
-print "lifestyle:\t"+age_strings[7]
-"""
-
-"""
-filename = "organized.csv"
-headers = gd.get_headers()
-gd.write_data_dicts(filename, headers, has_subject)
-"""
-
+	return [travel_bin, education_bin, love_bin, health_bin, family_bin, religion_bin, political_bin, lifestyle_bin, unidentified]
