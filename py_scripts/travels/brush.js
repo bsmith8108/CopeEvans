@@ -11,7 +11,7 @@ var x = d3.time.scale()
 var brush = d3.svg.brush()
     .x(x)
     .extent([new Date(2013, 7, 2), new Date(2013, 7, 3)])
-    .on("brushend", brushended)
+    .on("brush", brushended)
     .on("brushstart",brushstarted);
 
 var svg = d3.select("body").append("svg")
@@ -58,6 +58,9 @@ gBrush.selectAll("rect")
     .attr("height", height);
 
 function brushended() {
+  d3.selectAll("line").remove();
+  d3.selectAll(".traveler").style("background-color", "white");
+  
   if (!d3.event.sourceEvent) return; // only transition after input
   var extent0 = brush.extent(),
       extent1 = extent0.map(d3.time.year.round);
