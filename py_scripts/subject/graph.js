@@ -75,8 +75,10 @@ d3.csv("year_letter.csv", function(error, data) {
 	    .attr("y", function(d) { return y(d.letters); })
 	    .attr("height", function(d) { return height - y(d.letters)})
 	    .attr("title", function(d) { return d.year; })
-	    .on("click", function(d) {
-		d3.select("#year").text(d.year);
+	    .on("mouseover", function(d) {
+		var text = "Year: " + d.year + "<br>";
+		text = text + "Letters: " + d.letters;
+		d3.select("#year").html(text);
 	    });
     }
     

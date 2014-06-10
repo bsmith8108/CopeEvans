@@ -3,6 +3,10 @@ fill:steelblue;
 cursor:pointer;
 }
 
+.bar:hover {
+fill:red;
+}
+
 .axis {
 font: 10px sans-serif;
 }
