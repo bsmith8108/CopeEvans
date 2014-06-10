@@ -146,7 +146,7 @@ def get_subjects(list_of_dicts):
 		    inBin = True
 
 	    if not inBin:
-		unidentified.append(subjects)
+		unidentified.append(entry)
 	
 	"""
 	total = len(travel_bin)+len(education_bin)+len(love_bin)+len(health_bin)+len(family_bin)+len(religion_bin)+len(political_bin)+len(lifestyle_bin)
