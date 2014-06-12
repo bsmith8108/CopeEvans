@@ -1,0 +1,77 @@
+body {
+margin:0px;
+padding:0px;
+font-family:MainFont;
+background-color:black;
+}
+
+@font-face {
+font-family: MainFont;
+src: url("gabrille/Gabrielle.ttf");
+}
+
+section {
+overflow:hidden;
+height:60%;
+}
+
+.slide {
+color:red;
+width:80%;
+margin:auto;
+height:100%;
+padding:20px;
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+}
+
+p {
+font-size:30px;
+padding:40px;
+color:white;
+}
+
+.transparent {
+background-color:black;
+opacity:.75;
+width:80%;
+margin:auto;
+}
+
+#title {
+font-size:70px;
+margin-top:200px;
+}
+
+h1 {
+color:red;
+font-size:50px;
+margin:0px;
+text-align:center;
+}
+
+#slide-1{
+background-image:url('Wyoming_and_Tonawanda.jpg');
+}
+
+#slide-2 {
+background-image:url('Cope_Evans_family.png');
+}
+
+#slide-3 {
+background-image:url('images/suspension_bridge2.jpg');
+}
+
+#slide-4 {
+background-image:url('images/hugenotChurchCharleston.jpg');
+}
+
+#slide-5 {
+background-image:url('images/charleston_lumber_laborer.jpg');
+}
+
+#slide-6 {
+background-image:url('images/cattle_wagon.jpg');
+}
