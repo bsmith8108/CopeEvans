@@ -35,6 +35,7 @@ font-size:30px;
 #background-wrapper-1 {
 background-image:url("Wyoming_and_Tonawanda.jpg");
 background-size:contain;
+    background-repeat:no-repeat;
 height:100%;
 }
 
