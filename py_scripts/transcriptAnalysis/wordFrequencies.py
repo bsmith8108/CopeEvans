@@ -54,17 +54,30 @@ for entry in list_of_dicts:
     t = re.sub('\W',' ',t)
     t = t.split(" ")
     for word in t:
-	decades_list[index]["wordCount"] += 1
-	word = word.lower()
-	try:
-	    word_dict[word] += 1
-	    decades_list[index]["words"][word] += 1
-	except:
-	    word_dict[word] = 1
-	    decades_list[index]["words"][word] = 1
+	if not word == "":
+	    decades_list[index]["wordCount"] += 1
+	    word = word.lower()
+	    try:
+		word_dict[word] += 1
+		decades_list[index]["words"][word] += 1
+	    except:
+		word_dict[word] = 1
+		decades_list[index]["words"][word] = 1
     counter += 1
 
 sorted_words = sorted(word_dict.iteritems(), key=operator.itemgetter(1))
+
+for decade in decades_list:
+    percent_dict = {}
+    for entry in decade["words"].keys():
+	percent_dict[entry] = float(decade["words"][entry])/float(decade["wordCount"])
+    temp_sort = sorted(percent_dict.iteritems(), key=operator.itemgetter(1))
+    temp_sort = sorted(decade["words"].iteritems(), key=operator.itemgetter(1))
+    print "################# Decade " + decade["decade"] + " ########################"
+    print float(len(temp_sort))/float(decade["letters"])
+    temp_sort = temp_sort[1000:1010]
+    for item in temp_sort:
+	print item
 
 """
 testWord = "day"
@@ -77,7 +90,7 @@ for decade in decades_list:
 	percentage = 0
 	instances = "0"
     print decade["decade"] + "\t" + instances + "\t\t\t" + str(decade["letters"])+"\t\t"+str(percentage)
-"""
 for entry in sorted_words:
     print entry
+"""
 
