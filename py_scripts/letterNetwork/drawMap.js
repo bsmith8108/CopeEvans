@@ -37,6 +37,24 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    temp.on('mouseout', function(e) {
 		e.layer.closePopup();
 	    });
+
+	    /*
+	    var latlng = [parseFloat(data[i].Longitude),parseFloat(data[i].Latitude)]
+	    var geojsonMarkerOptions = {
+		radius: 8,
+		fillColor: "#ff7800",
+		color: "#000",
+		weight: 1,
+		opacity: 1,
+		fillOpacity: 0.8
+	    };
+
+	    L.geoJson(null, {
+		pointToLayer: function (feature, latlng) {
+		    return L.circleMarker(latlng, geojsonMarkerOptions);
+		}
+	    }).addTo(map);
+	    */
 	}
 	
 	info_list = [];

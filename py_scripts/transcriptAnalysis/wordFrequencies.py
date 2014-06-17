@@ -66,7 +66,7 @@ for entry in list_of_dicts:
     counter += 1
 
 sorted_words = sorted(word_dict.iteritems(), key=operator.itemgetter(1))
-
+"""
 for decade in decades_list:
     percent_dict = {}
     for entry in decade["words"].keys():
@@ -90,7 +90,7 @@ for decade in decades_list:
 	percentage = 0
 	instances = "0"
     print decade["decade"] + "\t" + instances + "\t\t\t" + str(decade["letters"])+"\t\t"+str(percentage)
+"""
 for entry in sorted_words:
     print entry
 """
-
