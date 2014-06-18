@@ -12,6 +12,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	console.log("travel",travel)
 	console.log("data",data)
 	for (var i=0; i<data.length; i++) {
+	    /*
 	    var temp = L.mapbox.featureLayer().addTo(map);
 
 	    var geojson = {
@@ -37,24 +38,23 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    temp.on('mouseout', function(e) {
 		e.layer.closePopup();
 	    });
+	    */
 
-	    /*
-	    var latlng = [parseFloat(data[i].Longitude),parseFloat(data[i].Latitude)]
+	    var latlng = [parseFloat(data[i].Latitude),parseFloat(data[i].Longitude)]
 	    var geojsonMarkerOptions = {
-		radius: 8,
-		fillColor: "#ff7800",
+		radius:7,
+		fillColor: "#fff",
 		color: "#000",
 		weight: 1,
 		opacity: 1,
-		fillOpacity: 0.8
+		fillOpacity: 0.8,
+		title: data[i].Name
 	    };
-
-	    L.geoJson(null, {
-		pointToLayer: function (feature, latlng) {
-		    return L.circleMarker(latlng, geojsonMarkerOptions);
-		}
-	    }).addTo(map);
-	    */
+	    
+	    var circle = L.circleMarker(latlng,geojsonMarkerOptions).bindPopup(
+		"<h2>"+data[i].Name+"</h2>");
+	    
+	    circle.addTo(map);
 	}
 	
 	info_list = [];
@@ -84,9 +84,10 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 	    });
 	}
 	
-	var all_paths = $("path.leaflet-clickable");
+	var all_paths = $("path.leaflet-clickable[stroke-opacity=\"0.5\"]");
+	console.log(all_paths.length)
 	for (var k=0;k<all_paths.length; k++) {
-	    $(all_paths[k]).attr("id","letter"+toString(k));
+	    $(all_paths[k]).attr("id","letter"+k.toString());
 	}
 
 	function openFancyBox(id) {
@@ -255,7 +256,7 @@ d3.csv("partialCurrectLocations.csv", function(error, data) {
 		var startYear = extent1[0].getFullYear();
 		var endYear = extent1[1].getFullYear();
 		var re = new RegExp("[0-9][0-9][0-9][0-9]")
-		var lines = $("path.leaflet-clickable");
+		var lines = $("path.leaflet-clickable[stroke-opacity=\"0.5\"]");
 		
 		filterDict["date"] = [startYear, endYear];
 		filterMap();
@@ -278,7 +279,7 @@ function getYear(date_string) {
 function filterMap() {
     var filterNames = {"age":"Age of Author","gender":"Gender of Author","family":"Family","transcript":"Transcript","subject":"Subject","author":"Creator", "date":"Date"};
     var keys = ["age","gender","family","transcript","subject","author","date"];
-    var lines= $("path.leaflet-clickable");
+    var lines= $("path.leaflet-clickable[stroke-opacity=\"0.5\"]");
     var keys_used = [];
     for (var i=0; i<keys.length; i++) {
 	if(filterDict[keys[i]].length > 0) {
