@@ -97,7 +97,8 @@ def probabilityDensity(x, mu_i, Sigma_i):
     return first*second
 
 def test_single(x,values):
-    classes = ["1800","1810","1820","1830","1840","1850","1860","1870","1880","1890","1900","1910","unkown"]
+    # classes = ["1800","1810","1820","1830","1840","1850","1860","1870","1880","1890","1900","1910","unkown"]
+    classes = ["0-10","10-20","20-30","30-40","40-50","50-60","60-70","70-80","80-90","unkown"]
     max_prob = 0
     myClass = ""
     counter = 0
@@ -117,7 +118,8 @@ def test_single(x,values):
     return myClass
 
 def test():
-    classes = ["1800","1810","1820","1830","1840","1850","1860","1870","1880","1890","1900","1910","unkown"]
+    classes = ["0-10","10-20","20-30","30-40","40-50","50-60","60-70","70-80","80-90","unkown"]
+    # classes = ["1800","1810","1820","1830","1840","1850","1860","1870","1880","1890","1900","1910","unkown"]
     full_data = gd2.get_data_list_of_dicts()
     test_data = gd3.get_data_list_of_dicts()
     values = getValues(classes,test_data)
@@ -132,7 +134,7 @@ def test():
 	if result == decade:
 	    correct += 1
 	try:
-	    if abs(int(result[2])-int(decade[2])) <= 2:
+	    if abs(int(result[0])-int(decade[0])) <= 2:
 		almost += 1
 	except:
 	    continue
