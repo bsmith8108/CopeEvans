@@ -1,0 +1,21 @@
+[{'id': 81, 'Partner': u'Mary Mendenhall', 'Parents': [u'John Cope(1691 - 14 Feb 1773)', u'Charity Jefferis(11 Apr 1695 - 1747)'], 'Name': u'Caleb Cope', 'Children': [u'Sarah Cope', u'John Cope', u'William Cope', u'Thomas Pim Cope', u'Israel Cope', u'Hannah Cope', u'Jasper Cope']}, {'id': 104, 'Partner': u'Abbey Anne Cope', 'Parents': [u'William Cope(3 Feb 1766 - Mar 1802)', u'Elizabeth Rohrer'], 'Name': u'Caleb Cope', 'Children': []}]
+John Cope
+[51]
+Oliver Cope
+Elizabeth Cope
+William Cope
+[51, 91, 23, 77]
+Ruth Cope
+John Cope
+[51, 91, 23, 77, 74, 28]
+[51, 91, 23, 77, 74, 28, 72]
+Daughter Cope
+Hannah Cope
+Samuel Cope
+Mary Cope
+John Cope
+Nathan Cope
+Caleb Cope
+Joshua Cope
+Joseph Cope
+[51, 91, 23, 77, 74, 28, 72, 78, 48, 93, 105, 39, 84]

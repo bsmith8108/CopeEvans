@@ -1,0 +1,58 @@
+body {
+margin:0px;
+padding:20px;
+}
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.selected {
+fill: yellow;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+#info {
+position:fixed;
+background-color:lightgrey;
+opacity:.8;
+padding:10px;
+}
+
+.child {
+padding:2px;
+cursor:pointer;
+padding-left:7px;
+}
+
+.close {
+float:right;
+background-color:grey;
+border:1px solid black;
+cursor:pointer;
+padding:1px 7px;
+margin-left:5px;
+}
+.hidden {
+height:10px;
+overflow:hidden;
+}
+
+.close:hover {
+background-color:black;
+color:white;
+}
+
+.child:hover {
+background-color:yellow;
+}

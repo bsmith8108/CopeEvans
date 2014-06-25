@@ -1,0 +1,6 @@
+When zoomed out, letters to the same state should just be one line
+    -color the lines by the density of the letters to that state or country
+    -as you zoom in the lines split up as you get closer to their destination/origin
+    -Can use what the zoom is to determine the number of lines to show
+
+	

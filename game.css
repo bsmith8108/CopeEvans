@@ -1,0 +1,53 @@
+body {
+margin:0px;
+padding:0px;
+}
+
+#header {
+font-size:60px;
+text-align:center;
+height:450px;
+background-color:lightblue;
+margin-bottom:40px;
+}
+
+#menu {
+position:fixed;
+top:0px;
+right:0px;
+padding:20px;
+background-color:lightblue;
+cursor:pointer;
+border-radius:20px;
+margin:10px;
+}
+
+#menu:hover {
+background-color:rgb(202,233,243);
+}
+
+.slideout-menu {
+width:100px;
+position:fixed;
+right:0px;
+background-color:white;
+}
+
+#goto {
+margin:auto;
+width:300px;
+background-color:black;
+color:white;
+font-size:40px;
+text-align:center;
+border-radius:50px;
+margin-bottom:100px;
+padding:40px;
+}
+
+#content {
+background-image: url('images/background_test.jpg');
+background-size:contain;
+repeat-x:none;
+height:4000px;
+}

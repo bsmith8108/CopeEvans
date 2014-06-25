@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['orgchart']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+	d3.json("familyTreeCope.json", function(error, family) {
+	    var data = new google.visualization.DataTable();
+	    data.addColumn('string', 'Name');
+	    data.addColumn('string', 'Parents');
+	    data.addColumn('string', 'MoreInfo');
+	    console.log(family)
+	    data.addRows(family);
+	    var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+	    chart.draw(data, {allowHtml:true});
+	});
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id='chart_div'></div>
+  </body>
+</html>

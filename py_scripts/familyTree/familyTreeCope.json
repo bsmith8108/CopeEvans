@@ -1,0 +1,738 @@
+[
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Margaret</div>", 
+      "v": "John Cope1"
+    }, 
+    null, 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Elizabeth</div>", 
+      "v": "John Cope1"
+    }, 
+    "John Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Oliver Cope<div class=\"partner\">Rebecca</div>", 
+      "v": "Oliver Cope1"
+    }, 
+    "John Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Elizabeth Cope<div class=\"partner\"></div>", 
+      "v": "Elizabeth Cope1"
+    }, 
+    "Oliver Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "William Cope<div class=\"partner\"></div>", 
+      "v": "William Cope1"
+    }, 
+    "Oliver Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Ruth Cope<div class=\"partner\"></div>", 
+      "v": "Ruth Cope1"
+    }, 
+    "Oliver Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Unknown</div>", 
+      "v": "John Cope2"
+    }, 
+    "Oliver Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Charity Jefferis</div>", 
+      "v": "John Cope3"
+    }, 
+    "Oliver Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Daughter Cope<div class=\"partner\"></div>", 
+      "v": "Daughter Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Hannah Cope<div class=\"partner\">John Carter</div>", 
+      "v": "Hannah Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Samuel Cope<div class=\"partner\">Deborah Parke</div>", 
+      "v": "Samuel Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Mary Cope<div class=\"partner\"></div>", 
+      "v": "Mary Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Grace Cloud</div>", 
+      "v": "John Cope4"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Mary Dickinson</div>", 
+      "v": "John Cope5"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Nathan Cope<div class=\"partner\">Amy Bane</div>", 
+      "v": "Nathan Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Caleb Cope<div class=\"partner\">Mary Mendenhall</div>", 
+      "v": "Caleb Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Sarah Cope<div class=\"partner\">James Miller</div>", 
+      "v": "Sarah Cope1"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Mary Updegraff</div>", 
+      "v": "John Cope6"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "William Cope<div class=\"partner\">Elizabeth Rohrer</div>", 
+      "v": "William Cope2"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Caleb Cope<div class=\"partner\">Abbey Anne Cope</div>", 
+      "v": "Caleb Cope2"
+    }, 
+    "William Cope2", 
+    null
+  ], 
+  [
+    {
+      "f": "Thomas Pim Cope<div class=\"partner\">Mary Drinker</div>", 
+      "v": "Thomas Pim Cope1"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Henry Cope<div class=\"partner\">Rachel Reeve</div>", 
+      "v": "Henry Cope1"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Mary Drinker Cope<div class=\"partner\">John Smith Haines</div>", 
+      "v": "Mary Drinker Cope1"
+    }, 
+    "Henry Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Henry Cope Haines<div class=\"partner\"></div>", 
+      "v": "Henry Cope Haines1"
+    }, 
+    "Mary Drinker Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Francis Cope Haines<div class=\"partner\"></div>", 
+      "v": "Francis Cope Haines1"
+    }, 
+    "Mary Drinker Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Francis Reeve Cope<div class=\"partner\">Anna Stewardson Brown</div>", 
+      "v": "Francis Reeve Cope1"
+    }, 
+    "Henry Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Elizabeth Stewardson Cope<div class=\"partner\">Alexis Thomas Cope</div>", 
+      "v": "Elizabeth Stewardson Cope1"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Agnes Cope<div class=\"partner\"></div>", 
+      "v": "Agnes Cope1"
+    }, 
+    "Elizabeth Stewardson Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Eleanor Tyson Cope<div class=\"partner\">Henry Wilder Foote Jr.</div>", 
+      "v": "Eleanor Tyson Cope1"
+    }, 
+    "Elizabeth Stewardson Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Agnes Cope Foote<div class=\"partner\"></div>", 
+      "v": "Agnes Cope Foote1"
+    }, 
+    "Eleanor Tyson Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Rachel Reeve Cope<div class=\"partner\">Jonathan Evans</div>", 
+      "v": "Rachel Reeve Cope1"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Anna Cope Evans<div class=\"partner\"></div>", 
+      "v": "Anna Cope Evans1"
+    }, 
+    "Rachel Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "William Brown Cope<div class=\"partner\"></div>", 
+      "v": "William Brown Cope1"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Francis Hazen Cope<div class=\"partner\"></div>", 
+      "v": "Francis Hazen Cope2"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Algernon Cope<div class=\"partner\">Margaret Cheston Tatnall</div>", 
+      "v": "Algernon Cope1"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Anna Brown Cope<div class=\"partner\">Theophilus B. Stork</div>", 
+      "v": "Anna Brown Cope1"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Caroline Mary Cope<div class=\"partner\">William Draper Lewis</div>", 
+      "v": "Caroline Mary Cope1"
+    }, 
+    "Francis Reeve Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Alfreda Cope Lewis<div class=\"partner\"></div>", 
+      "v": "Alfreda Cope Lewis1"
+    }, 
+    "Caroline Mary Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Thomas Pim Cope Ii<div class=\"partner\">Elizabeth Waln Stokes</div>", 
+      "v": "Thomas Pim Cope Ii2"
+    }, 
+    "Henry Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Mary Stokes Cope<div class=\"partner\"></div>", 
+      "v": "Mary Stokes Cope2"
+    }, 
+    "Thomas Pim Cope Ii2", 
+    null
+  ], 
+  [
+    {
+      "f": "Margaret Cope<div class=\"partner\"></div>", 
+      "v": "Margaret Cope1"
+    }, 
+    "Thomas Pim Cope Ii2", 
+    null
+  ], 
+  [
+    {
+      "f": "John Stokes Cope<div class=\"partner\">Elizabeth Hooten Savery</div>", 
+      "v": "John Stokes Cope1"
+    }, 
+    "Thomas Pim Cope Ii2", 
+    null
+  ], 
+  [
+    {
+      "f": "William Savery Cope<div class=\"partner\"></div>", 
+      "v": "William Savery Cope2"
+    }, 
+    "John Stokes Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Ernesta Cope<div class=\"partner\"></div>", 
+      "v": "Ernesta Cope1"
+    }, 
+    "John Stokes Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Sophia Cope<div class=\"partner\"></div>", 
+      "v": "Sophia Cope1"
+    }, 
+    "John Stokes Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Arthur Cope<div class=\"partner\"></div>", 
+      "v": "Arthur Cope1"
+    }, 
+    "Thomas Pim Cope Ii2", 
+    null
+  ], 
+  [
+    {
+      "f": "Walter Cope<div class=\"partner\">Eliza Middleton Kane</div>", 
+      "v": "Walter Cope1"
+    }, 
+    "Thomas Pim Cope Ii2", 
+    null
+  ], 
+  [
+    {
+      "f": "Thomas Pym Cope Jr.<div class=\"partner\"></div>", 
+      "v": "Thomas Pym Cope Jr.3"
+    }, 
+    "Walter Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Elizabeth Frances Cope<div class=\"partner\"></div>", 
+      "v": "Elizabeth Frances Cope2"
+    }, 
+    "Walter Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Anne Francis Cope<div class=\"partner\"></div>", 
+      "v": "Anne Francis Cope1"
+    }, 
+    "Walter Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Oliver Cope<div class=\"partner\">Alice Denormandie</div>", 
+      "v": "Oliver Cope2"
+    }, 
+    "Walter Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Robert Denormandie Cope<div class=\"partner\"></div>", 
+      "v": "Robert Denormandie Cope1"
+    }, 
+    "Oliver Cope2", 
+    null
+  ], 
+  [
+    {
+      "f": "Eliza Middleton Cope<div class=\"partner\">Timothy Stone Harrison</div>", 
+      "v": "Eliza Middleton Cope1"
+    }, 
+    "Oliver Cope2", 
+    null
+  ], 
+  [
+    {
+      "f": "Emily Cope Harrison<div class=\"partner\">James Robert Boyd</div>", 
+      "v": "Emily Cope Harrison1"
+    }, 
+    "Eliza Middleton Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Alban Cope<div class=\"partner\"></div>", 
+      "v": "Alban Cope1"
+    }, 
+    "Thomas Pim Cope Ii2", 
+    null
+  ], 
+  [
+    {
+      "f": "Anna Cope<div class=\"partner\"></div>", 
+      "v": "Anna Cope1"
+    }, 
+    "Henry Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Ruth Anna Cope<div class=\"partner\"></div>", 
+      "v": "Ruth Anna Cope1"
+    }, 
+    "Henry Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Francis Cope<div class=\"partner\"></div>", 
+      "v": "Francis Cope1"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Caroline Cope<div class=\"partner\"></div>", 
+      "v": "Caroline Cope1"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "William Drinker Cope<div class=\"partner\">Susan Newbold</div>", 
+      "v": "William Drinker Cope3"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Clementine Cope<div class=\"partner\"></div>", 
+      "v": "Clementine Cope1"
+    }, 
+    "William Drinker Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Edgar Cope<div class=\"partner\">Amy Elizabeth Yarnall</div>", 
+      "v": "Edgar Cope1"
+    }, 
+    "William Drinker Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Caroline Elizabeth Cope<div class=\"partner\"></div>", 
+      "v": "Caroline Elizabeth Cope2"
+    }, 
+    "William Drinker Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Annette Cope<div class=\"partner\"></div>", 
+      "v": "Annette Cope1"
+    }, 
+    "William Drinker Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Eleanor Cope<div class=\"partner\"></div>", 
+      "v": "Eleanor Cope1"
+    }, 
+    "William Drinker Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Alexis Thomas Cope<div class=\"partner\">Elizabeth Stewardson Cope</div>", 
+      "v": "Alexis Thomas Cope1"
+    }, 
+    "William Drinker Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Caroline Rachel Cope<div class=\"partner\">Edward Yarnall</div>", 
+      "v": "Caroline Rachel Cope3"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Eleanor Cope<div class=\"partner\">John Roberts Tyson</div>", 
+      "v": "Eleanor Cope2"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Alfred Cope<div class=\"partner\">Hannah Edge</div>", 
+      "v": "Alfred Cope1"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Edward Drinker Cope<div class=\"partner\">Anne Pim</div>", 
+      "v": "Edward Drinker Cope1"
+    }, 
+    "Alfred Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Julia Cope<div class=\"partner\">William Henry Collins</div>", 
+      "v": "Julia Cope1"
+    }, 
+    "Edward Drinker Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Elizabeth Waln Cope<div class=\"partner\">Philip Cresson Garrett</div>", 
+      "v": "Elizabeth Waln Cope3"
+    }, 
+    "Alfred Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Alfred Cope Garrett<div class=\"partner\">Eleanor Tyson Evans</div>", 
+      "v": "Alfred Cope Garrett1"
+    }, 
+    "Elizabeth Waln Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Alfred Cope Garrett Jr.<div class=\"partner\"></div>", 
+      "v": "Alfred Cope Garrett Jr.2"
+    }, 
+    "Alfred Cope Garrett1", 
+    null
+  ], 
+  [
+    {
+      "f": "Mary Anna Cope<div class=\"partner\">John E. Carter</div>", 
+      "v": "Mary Anna Cope3"
+    }, 
+    "Alfred Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Alfred Cope<div class=\"partner\">Rebecca Biddle</div>", 
+      "v": "Alfred Cope2"
+    }, 
+    "Thomas Pim Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "James Biddle Cope<div class=\"partner\">Mary Louise Saunders</div>", 
+      "v": "James Biddle Cope1"
+    }, 
+    "Alfred Cope2", 
+    null
+  ], 
+  [
+    {
+      "f": "Thomas Pim Cope<div class=\"partner\">Elizabeth Waln Stokes</div>", 
+      "v": "Thomas Pim Cope4"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Israel Cope<div class=\"partner\">Sarah Buckely</div>", 
+      "v": "Israel Cope1"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Israel Cope<div class=\"partner\">Margaret Cooper</div>", 
+      "v": "Israel Cope2"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Hannah Cope<div class=\"partner\">Simon Cranston</div>", 
+      "v": "Hannah Cope2"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Jasper Cope<div class=\"partner\">Rebecca Shoemaker</div>", 
+      "v": "Jasper Cope1"
+    }, 
+    "Caleb Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Abbey Anne Cope<div class=\"partner\">Caleb Cope</div>", 
+      "v": "Abbey Anne Cope1"
+    }, 
+    "Jasper Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Joshua Cope<div class=\"partner\"></div>", 
+      "v": "Joshua Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Joseph Cope<div class=\"partner\">Ann Taylor</div>", 
+      "v": "Joseph Cope1"
+    }, 
+    "John Cope3", 
+    null
+  ], 
+  [
+    {
+      "f": "Joseph Cope<div class=\"partner\">Eliza Gilbert</div>", 
+      "v": "Joseph Cope2"
+    }, 
+    "Joseph Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Gilbert Cope<div class=\"partner\">Anna Garrett</div>", 
+      "v": "Gilbert Cope1"
+    }, 
+    "Joseph Cope2", 
+    null
+  ], 
+  [
+    {
+      "f": "Herman Cope<div class=\"partner\"></div>", 
+      "v": "Herman Cope1"
+    }, 
+    "Gilbert Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Ellen Cope<div class=\"partner\"></div>", 
+      "v": "Ellen Cope1"
+    }, 
+    "Gilbert Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "David G. Cope<div class=\"partner\"></div>", 
+      "v": "David G. Cope1"
+    }, 
+    "Gilbert Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "Joseph Cope<div class=\"partner\"></div>", 
+      "v": "Joseph Cope3"
+    }, 
+    "Gilbert Cope1", 
+    null
+  ], 
+  [
+    {
+      "f": "John Cope<div class=\"partner\">Elizabeth Fisher</div>", 
+      "v": "John Cope7"
+    }, 
+    "Oliver Cope1", 
+    null
+  ]
+]

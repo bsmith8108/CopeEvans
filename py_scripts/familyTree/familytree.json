@@ -1,0 +1,489 @@
+{
+  "Cope Member": "John Cope", 
+  "Partner": "Margaret", 
+  "children": [
+    {
+      "Cope Member": "John Cope", 
+      "Partner": "Elizabeth", 
+      "children": [
+        {
+          "Cope Member": "Oliver Cope", 
+          "Partner": "Rebecca", 
+          "children": [
+            {
+              "Cope Member": "Elizabeth Cope", 
+              "Partner": "", 
+              "children": []
+            }, 
+            {
+              "Cope Member": "William Cope", 
+              "Partner": "", 
+              "children": []
+            }, 
+            {
+              "Cope Member": "Ruth Cope", 
+              "Partner": "", 
+              "children": []
+            }, 
+            {
+              "Cope Member": "John Cope", 
+              "Partner": "Unknown", 
+              "children": []
+            }, 
+            {
+              "Cope Member": "John Cope", 
+              "Partner": "Charity Jefferis", 
+              "children": [
+                {
+                  "Cope Member": "Daughter Cope", 
+                  "Partner": "", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "Hannah Cope", 
+                  "Partner": "John Carter", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "Samuel Cope", 
+                  "Partner": "Deborah Parke", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "Mary Cope", 
+                  "Partner": "", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "John Cope", 
+                  "Partner": "Grace Cloud", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "John Cope", 
+                  "Partner": "Mary Dickinson", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "Nathan Cope", 
+                  "Partner": "Amy Bane", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "Caleb Cope", 
+                  "Partner": "Mary Mendenhall", 
+                  "children": [
+                    {
+                      "Cope Member": "Sarah Cope", 
+                      "Partner": "James Miller", 
+                      "children": []
+                    }, 
+                    {
+                      "Cope Member": "John Cope", 
+                      "Partner": "Mary Updegraff", 
+                      "children": []
+                    }, 
+                    {
+                      "Cope Member": "William Cope", 
+                      "Partner": "Elizabeth Rohrer", 
+                      "children": [
+                        {
+                          "Cope Member": "Caleb Cope", 
+                          "Partner": "Abbey Anne Cope", 
+                          "children": []
+                        }
+                      ]
+                    }, 
+                    {
+                      "Cope Member": "Thomas Pim Cope", 
+                      "Partner": "Mary Drinker", 
+                      "children": [
+                        {
+                          "Cope Member": "Henry Cope", 
+                          "Partner": "Rachel Reeve", 
+                          "children": [
+                            {
+                              "Cope Member": "Mary Drinker Cope", 
+                              "Partner": "John Smith Haines", 
+                              "children": [
+                                {
+                                  "Cope Member": "Henry Cope Haines", 
+                                  "Partner": "", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Francis Cope Haines", 
+                                  "Partner": "", 
+                                  "children": []
+                                }
+                              ]
+                            }, 
+                            {
+                              "Cope Member": "Francis Reeve Cope", 
+                              "Partner": "Anna Stewardson Brown", 
+                              "children": [
+                                {
+                                  "Cope Member": "Elizabeth Stewardson Cope", 
+                                  "Partner": "Alexis Thomas Cope", 
+                                  "children": [
+                                    {
+                                      "Cope Member": "Agnes Cope", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }, 
+                                    {
+                                      "Cope Member": "Eleanor Tyson Cope", 
+                                      "Partner": "Henry Wilder Foote Jr.", 
+                                      "children": [
+                                        {
+                                          "Cope Member": "Agnes Cope Foote", 
+                                          "Partner": "", 
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }, 
+                                {
+                                  "Cope Member": "Rachel Reeve Cope", 
+                                  "Partner": "Jonathan Evans", 
+                                  "children": [
+                                    {
+                                      "Cope Member": "Anna Cope Evans", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }
+                                  ]
+                                }, 
+                                {
+                                  "Cope Member": "William Brown Cope", 
+                                  "Partner": "", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Francis Hazen Cope", 
+                                  "Partner": "", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Algernon Cope", 
+                                  "Partner": "Margaret Cheston Tatnall", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Anna Brown Cope", 
+                                  "Partner": "Theophilus B. Stork", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Caroline Mary Cope", 
+                                  "Partner": "William Draper Lewis", 
+                                  "children": [
+                                    {
+                                      "Cope Member": "Alfreda Cope Lewis", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }, 
+                            {
+                              "Cope Member": "Thomas Pim Cope Ii", 
+                              "Partner": "Elizabeth Waln Stokes", 
+                              "children": [
+                                {
+                                  "Cope Member": "Mary Stokes Cope", 
+                                  "Partner": "", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Margaret Cope", 
+                                  "Partner": "", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "John Stokes Cope", 
+                                  "Partner": "Elizabeth Hooten Savery", 
+                                  "children": [
+                                    {
+                                      "Cope Member": "William Savery Cope", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }, 
+                                    {
+                                      "Cope Member": "Ernesta Cope", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }, 
+                                    {
+                                      "Cope Member": "Sophia Cope", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }
+                                  ]
+                                }, 
+                                {
+                                  "Cope Member": "Arthur Cope", 
+                                  "Partner": "", 
+                                  "children": []
+                                }, 
+                                {
+                                  "Cope Member": "Walter Cope", 
+                                  "Partner": "Eliza Middleton Kane", 
+                                  "children": [
+                                    {
+                                      "Cope Member": "Thomas Pym Cope Jr.", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }, 
+                                    {
+                                      "Cope Member": "Elizabeth Frances Cope", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }, 
+                                    {
+                                      "Cope Member": "Anne Francis Cope", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }, 
+                                    {
+                                      "Cope Member": "Oliver Cope", 
+                                      "Partner": "Alice Denormandie", 
+                                      "children": [
+                                        {
+                                          "Cope Member": "Robert Denormandie Cope", 
+                                          "Partner": "", 
+                                          "children": []
+                                        }, 
+                                        {
+                                          "Cope Member": "Eliza Middleton Cope", 
+                                          "Partner": "Timothy Stone Harrison", 
+                                          "children": [
+                                            {
+                                              "Cope Member": "Emily Cope Harrison", 
+                                              "Partner": "James Robert Boyd", 
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }, 
+                                {
+                                  "Cope Member": "Alban Cope", 
+                                  "Partner": "", 
+                                  "children": []
+                                }
+                              ]
+                            }, 
+                            {
+                              "Cope Member": "Anna Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Ruth Anna Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }
+                          ]
+                        }, 
+                        {
+                          "Cope Member": "Francis Cope", 
+                          "Partner": "", 
+                          "children": []
+                        }, 
+                        {
+                          "Cope Member": "Caroline Cope", 
+                          "Partner": "", 
+                          "children": []
+                        }, 
+                        {
+                          "Cope Member": "William Drinker Cope", 
+                          "Partner": "Susan Newbold", 
+                          "children": [
+                            {
+                              "Cope Member": "Clementine Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Edgar Cope", 
+                              "Partner": "Amy Elizabeth Yarnall", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Caroline Elizabeth Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Annette Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Eleanor Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Alexis Thomas Cope", 
+                              "Partner": "Elizabeth Stewardson Cope", 
+                              "children": []
+                            }
+                          ]
+                        }, 
+                        {
+                          "Cope Member": "Caroline Rachel Cope", 
+                          "Partner": "Edward Yarnall", 
+                          "children": []
+                        }, 
+                        {
+                          "Cope Member": "Eleanor Cope", 
+                          "Partner": "John Roberts Tyson", 
+                          "children": []
+                        }, 
+                        {
+                          "Cope Member": "Alfred Cope", 
+                          "Partner": "Hannah Edge", 
+                          "children": [
+                            {
+                              "Cope Member": "Edward Drinker Cope", 
+                              "Partner": "Anne Pim", 
+                              "children": [
+                                {
+                                  "Cope Member": "Julia Cope", 
+                                  "Partner": "William Henry Collins", 
+                                  "children": []
+                                }
+                              ]
+                            }, 
+                            {
+                              "Cope Member": "Elizabeth Waln Cope", 
+                              "Partner": "Philip Cresson Garrett", 
+                              "children": [
+                                {
+                                  "Cope Member": "Alfred Cope Garrett", 
+                                  "Partner": "Eleanor Tyson Evans", 
+                                  "children": [
+                                    {
+                                      "Cope Member": "Alfred Cope Garrett Jr.", 
+                                      "Partner": "", 
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }, 
+                            {
+                              "Cope Member": "Mary Anna Cope", 
+                              "Partner": "John E. Carter", 
+                              "children": []
+                            }
+                          ]
+                        }, 
+                        {
+                          "Cope Member": "Alfred Cope", 
+                          "Partner": "Rebecca Biddle", 
+                          "children": [
+                            {
+                              "Cope Member": "James Biddle Cope", 
+                              "Partner": "Mary Louise Saunders", 
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }, 
+                    {
+                      "Cope Member": "Thomas Pim Cope", 
+                      "Partner": "Elizabeth Waln Stokes", 
+                      "children": []
+                    }, 
+                    {
+                      "Cope Member": "Israel Cope", 
+                      "Partner": "Sarah Buckely", 
+                      "children": []
+                    }, 
+                    {
+                      "Cope Member": "Israel Cope", 
+                      "Partner": "Margaret Cooper", 
+                      "children": []
+                    }, 
+                    {
+                      "Cope Member": "Hannah Cope", 
+                      "Partner": "Simon Cranston", 
+                      "children": []
+                    }, 
+                    {
+                      "Cope Member": "Jasper Cope", 
+                      "Partner": "Rebecca Shoemaker", 
+                      "children": [
+                        {
+                          "Cope Member": "Abbey Anne Cope", 
+                          "Partner": "Caleb Cope", 
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "Cope Member": "Joshua Cope", 
+                  "Partner": "", 
+                  "children": []
+                }, 
+                {
+                  "Cope Member": "Joseph Cope", 
+                  "Partner": "Ann Taylor", 
+                  "children": [
+                    {
+                      "Cope Member": "Joseph Cope", 
+                      "Partner": "Eliza Gilbert", 
+                      "children": [
+                        {
+                          "Cope Member": "Gilbert Cope", 
+                          "Partner": "Anna Garrett", 
+                          "children": [
+                            {
+                              "Cope Member": "Herman Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Ellen Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "David G. Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }, 
+                            {
+                              "Cope Member": "Joseph Cope", 
+                              "Partner": "", 
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "Cope Member": "John Cope", 
+              "Partner": "Elizabeth Fisher", 
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
