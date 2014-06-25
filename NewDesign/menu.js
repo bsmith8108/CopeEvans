@@ -2,10 +2,11 @@ $(document).ready(function() {
     var isUp = false;
     $("#explore").click(function() {
 	if (!isUp){
-	    $("#menu").css("bottom","0px");
+	    $("#menu:hidden").css("display","block");
 	    $("#menu").animate( {
 		height:'400px',
-		opacity:"1"
+		opacity:"1",
+		display:"block"
 	    });
 	    $(this).animate({
 	    bottom: '+=400px'
@@ -16,13 +17,12 @@ $(document).ready(function() {
 	    $("#menu").animate( {
 		height:'0px',
 		opacity:"0",
-		bottom:"30px"
 	    });
 	    $(this).animate({
 	    bottom: '-=400px'
 	    });
+	    $("#menu").css("display","none").delay(500);
 	    isUp = false;
-	    $("#menu").css("bottom","30px");
 	}   
     });
 });
