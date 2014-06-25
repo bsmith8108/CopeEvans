@@ -20,8 +20,9 @@ $(document).ready(function() {
 	    });
 	    $(this).animate({
 	    bottom: '-=400px'
-	    });
-	    $("#menu").css("display","none").delay(500);
+	    },
+	    { duration: 1000 });
+	    $("#menu").css("display","none");
 	    isUp = false;
 	}   
     });
