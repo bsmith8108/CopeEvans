@@ -51,3 +51,14 @@ background-color:rgb(150, 149, 149);
 width:60%;
 margin:auto;
 }
+
+.navigation-button {
+display:inline-block;
+margin-right:30px;
+padding:10px;
+}
+
+.navigation-button:hover {
+background-color:rgb(150,149,149);
+}
+

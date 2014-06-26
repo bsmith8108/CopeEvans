@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $("p.info").css("display","none");
+    $("div.info").css("display","none");
+    $(".content:first-child").children("div").slideDown();
+    $(".content:first-child").children("div").addClass("selected");
     $(".content h2").click(function() {
 	$(this).next().toggleClass("selected")
 	console.log($(this).next())

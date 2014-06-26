@@ -6,7 +6,7 @@ margin:0px;
 #wrapper {
 height:100%;
 width:100%;
-background-image:url('../images/Cope_Evans_ship_BW.png');
+background-image:url('../images/Wyoming_and_Tonawanda.jpg');
 background-size:cover;
 text-align:center;
 }
@@ -65,11 +65,12 @@ padding:10px;
 
 .menu-item {
 position:absolute;
-background-image:url("../images/Cope_Evans_ship_BW.png");
-height:75px;
-width:75px;
-border-radius:50px;
 overflow:hidden;
+height:100px;
+width:100px;
+background-repeat:no-repeat;
+background-size:cover;
+border-radius:10px;
 }
 
 .menu-item:hover {
@@ -81,19 +82,23 @@ cursor:pointer;
 #start {
 left:100px;
 bottom:200px;
+background-image:url("../images/independence_hall2.png");
 }
 
 #section-1 {
 left:400px;
 bottom:100px;
+background-image:url("../images/industrialplant250.jpg");
 }
 
 #section-2 {
 left:700px;
-bottom:300px;
+bottom:250px;
+background-image:url("../images/liberty_bell2.png");
 }
 
 #end {
 left:1000px;
+background-image:url("../images/WilliamPenn-Good-End1.png");
 bottom:200px;
 }
