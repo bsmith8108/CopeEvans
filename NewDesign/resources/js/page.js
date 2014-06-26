@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("p.info").slideUp();
+    $("p.info").css("display","none");
     $(".content h2").click(function() {
 	$(this).next().toggleClass("selected")
 	console.log($(this).next())
