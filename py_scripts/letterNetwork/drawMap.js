@@ -6,40 +6,18 @@ var line_info_list = [];
 var line_info_dict = {};
 var filterDict = {"age":[],"gender":[],"family":[],"transcript":[],"subject":[], "author":[],"date":[]};
 var brush;
+/*
+map.on("zoomend", zoom) // this should be called when trying to filter down the lines
+map.getZoom() // returns the current zoom level
 
+The above two can be used to filter down the lines to make it less crowded
+-possibly color based on the density of the lines
+*/
 d3.csv("partialCurrectLocations.csv", function(error, data) {
     d3.csv("letterTravels.csv", function(error, travel) {
 	console.log("travel",travel)
 	console.log("data",data)
 	for (var i=0; i<data.length; i++) {
-	    /*
-	    var temp = L.mapbox.featureLayer().addTo(map);
-
-	    var geojson = {
-	    type: 'FeatureCollection',
-	    features: [{
-		type: 'Feature',
-		    properties: {
-			title: data[i].Name,
-			'marker-color':'#f86767',
-			'marker-size':'small'
-		    },
-		    geometry: {
-			type: 'Point',
-			coordinates:[parseFloat(data[i].Longitude),parseFloat(data[i].Latitude)]
-		    }
-		}]
-	    };
-
-	    temp.setGeoJSON(geojson);
-	    temp.on('mouseover', function(e) {
-		e.layer.openPopup();
-	    });
-	    temp.on('mouseout', function(e) {
-		e.layer.closePopup();
-	    });
-	    */
-
 	    var latlng = [parseFloat(data[i].Latitude),parseFloat(data[i].Longitude)]
 	    var geojsonMarkerOptions = {
 		radius:7,
